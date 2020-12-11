@@ -1,11 +1,11 @@
 
 public class Cat
 {
-    private double originWeight;
-    private double weight;
+    public double originWeight;
+    public double weight;
 
-    private double minWeight;
-    private double maxWeight;
+    public double minWeight;
+    public double maxWeight;
 
     public Cat()
     {
@@ -18,21 +18,24 @@ public class Cat
 
     public void meow()
     {
-        weight = weight - 1;
+        weight = weight - 50;
         System.out.println("Meow");
     }
 
     public void feed(Double amount)
+
     {
         weight = weight + amount;
     }
 
     public void drink(Double amount)
+
     {
         weight = weight + amount;
     }
 
     public Double getWeight()
+
     {
         return weight;
     }
