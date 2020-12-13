@@ -10,76 +10,85 @@ public class Cat
     public double minWeight;
     public double maxWeight;
     public double foodAmount;
-    public double timesMeow;
+    public double drinkAmount;
+    public int timesMeow;
     public static int count;
-    public boolean isDead;
+    public boolean isDead = false;
     public String colour;
 
-    public  boolean isDead()
-    {
-        if (weight < minWeight)
-        {
-            isDead = true;
-        }
-        if (weight > maxWeight)
-        {
-            isDead = true;
-        }
-        return isDead;
-    }
-
+    //==============================================================================
     public Cat()
     {
         weight = 1500.0 + 3000.0 * Math.random();
         originWeight = weight;
         minWeight = 1000.0;
         maxWeight = 9000.0;
-        count = ++count;
+        count++;
         ;
 
     }
 
-
-
-
     public void meow()
     {
-        if(weight > minWeight)
+        if(weight > minWeight && weight < maxWeight && !isDead)
         {
             weight = weight - 50;
             timesMeow = ++timesMeow;
             System.out.println("Meow");
         }
-        else System.out.println("Dead cat cannot meow");
+        else {
+            System.out.println("Dead cat cannot meow");
+            isDead = true;
+            count--;
+        }
     }
 
     public void feed(Double amount)
     {
-        if(weight < maxWeight)
+        if(weight > minWeight && weight < maxWeight && !isDead)
         {
             weight = weight + amount;
             foodAmount = foodAmount + amount;
+            System.out.println("Yum");
+
         }
-        else System.out.println("Exploded cat cannot eat");
+        else {
+            System.out.println("Dead cat cannot eat");
+            isDead = true;
+            count--;
+        }
     }
 
     public void drink(Double amount)
     {
-        weight = weight + amount;
+        if(weight > minWeight && weight < maxWeight && !isDead)
+        {
+            weight = weight + amount;
+            drinkAmount = drinkAmount + amount;
+            System.out.println("Surp");
+        }
+        else {
+            System.out.println("Dead cat cannot drink");
+            isDead = true;
+            count--;
+        }
     }
 
     public void pee ()
         {
-            if(weight > minWeight)
+            if(weight > minWeight && weight < maxWeight && !isDead)
             {
                 weight = weight - 100;
-                System.out.println("Go clean cat's litter box");
+                System.out.println("Peeee");
             }
-            else
+            else {
                 System.out.println("Dead cat cannot pee");
+                isDead = true;
+                count--;
+            }
         }
 
-    public Double getTimesMeow()
+    public int getTimesMeow()
     {
         return timesMeow;
     }
@@ -89,24 +98,18 @@ public class Cat
         return foodAmount;
     }
 
+    public Double getDrinkAmount()
+    {
+        return drinkAmount;
+    }
+
     public Double getWeight()
 
     {
         return weight;
     }
 
-    public  int deadCount()
-    {
-        if (isDead = true)
-        {
-            count = --count;
-
-        }
-        return count;
-    }
-
-
-    public static int getCount()
+    public static int getDeadCatCount()
     {
         return count;
     }

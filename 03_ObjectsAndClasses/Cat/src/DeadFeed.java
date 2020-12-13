@@ -7,7 +7,7 @@ public class DeadFeed
     {
         Cat romka = new Cat();
         System.out.println("Romka's weight: " + romka.getWeight());
-        while (romka.getWeight() < romka.maxWeight)
+        while (!romka.isDead)
         {
             romka.feed(1.0);
         }

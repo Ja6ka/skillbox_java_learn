@@ -14,23 +14,21 @@ public class CatCount //Run to check how many cats were created
         Cat po = new Cat();
         po.meow();
 
-        System.out.println(Cat.getCount());
+        System.out.println(Cat.getDeadCatCount());
 
-        while (lala.getWeight() > lala.minWeight)
+        while (!lala.isDead)
         {
             lala.meow();
         }
         System.out.println(lala.getStatus());
-        lala.deadCount();
-        System.out.println(Cat.getCount());
+        System.out.println(Cat.getDeadCatCount());
 
-        while (po.getWeight() > po.minWeight)
+        while (!po.isDead)
         {
             po.meow();
         }
         System.out.println(po.getStatus());
-        po.deadCount();
-        System.out.println(Cat.getCount());
+        System.out.println(Cat.getDeadCatCount());
 
     }
 }

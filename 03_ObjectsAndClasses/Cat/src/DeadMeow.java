@@ -7,7 +7,7 @@ public class DeadMeow
     {
         Cat murka = new Cat();
         System.out.println("Romka's weight: " + murka.getWeight());
-        while (murka.getWeight() > murka.minWeight)
+        while (!murka.isDead)
         {
             murka.meow();
         }
