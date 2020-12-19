@@ -14,7 +14,7 @@ public class Cat
     public static int timesMeow;
     public static int count;
     public static boolean isDead = false;
-    public String colour;
+    public static String colour;
     public static String name;
 
     //==============================================================================
@@ -29,6 +29,16 @@ public class Cat
 
     public Cat(double weight) {
         Cat.weight = weight;
+    }
+
+    public static String setColour(String colour) {
+        Cat.colour = colour;
+        return colour;
+    }
+
+    public static String getColour() {
+        Cat.colour = colour;
+        return colour;
     }
 
     public static String setName(String name) {

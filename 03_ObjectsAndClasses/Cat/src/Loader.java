@@ -28,9 +28,11 @@ public class Loader
 
         getKitten();
         Cat.setName("Pupsik");
+        Cat.setColour("BLACK");
         System.out.println(Cat.getName() + " is now " + Cat.getStatus() + " and weights " + Cat.getWeight());
         Cat.meow();
         System.out.println(Cat.getWeight());
+        System.out.println(Cat.getColour());
 
 
     }
