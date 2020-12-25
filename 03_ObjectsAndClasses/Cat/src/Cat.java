@@ -5,17 +5,17 @@ public class Cat
     public static final int MIN_WEIGHT = 1000;
     public static final int MAX_WEIGHT = 9000;
 
-    public static double originWeight;
-    public static double weight;
-    public static double minWeight;
-    public static double maxWeight;
-    public static double foodAmount;
-    public static double drinkAmount;
-    public static int timesMeow;
+    public double originWeight;
+    public double weight;
+    public double minWeight;
+    public double maxWeight;
+    public double foodAmount;
+    public double drinkAmount;
+    public int timesMeow;
     public static int count;
     public static boolean isDead = false;
-    public static String colour;
-    public static String name;
+    public String colour;
+    public String name;
 
     //==============================================================================
 
@@ -28,31 +28,40 @@ public class Cat
     }
 
     public Cat(double weight) {
-        Cat.weight = weight;
+        this.weight = weight;
     }
 
-    public static String setColour(String colour) {
-        Cat.colour = colour;
+    public Cat catCopy() {
+        Cat catCopy = new Cat (this.weight);
+        catCopy.originWeight = this.originWeight;
+        catCopy.minWeight = this.minWeight;
+        catCopy.maxWeight = this.maxWeight;
+        count++;
+        return catCopy;
+    }
+
+    public  String setColour(String colour) {
+        this.colour = colour;
         return colour;
     }
 
-    public static String getColour() {
-        Cat.colour = colour;
+    public  String getColour() {
+        this.colour = colour;
         return colour;
     }
 
-    public static String setName(String name) {
-        Cat.name = name;
+    public  String setName(String name) {
+        this.name = name;
         return name;
     }
 
-    public static String getName() {
-        Cat.name = name;
+    public  String getName() {
+        this.name = name;
         return name;
     }
 
 
-    public static void meow() {
+    public  void meow() {
         if(weight > minWeight && weight < maxWeight) {
             weight = weight - 50;
             timesMeow = ++timesMeow;
@@ -64,7 +73,7 @@ public class Cat
         }
     }
 
-    public static void feed(Double amount) {
+    public  void feed(Double amount) {
         if(weight > minWeight && weight < maxWeight) {
             weight = weight + amount;
             foodAmount = foodAmount + amount;
@@ -76,7 +85,7 @@ public class Cat
         }
     }
 
-    public static void drink(Double amount) {
+    public  void drink(Double amount) {
         if(weight > minWeight && weight < maxWeight) {
             weight = weight + amount;
             drinkAmount = drinkAmount + amount;
@@ -88,7 +97,7 @@ public class Cat
         }
     }
 
-    public static void pee () {
+    public  void pee () {
             if(weight > minWeight && weight < maxWeight) {
                 weight = weight - 100;
                 System.out.println("Peeee");
@@ -103,17 +112,17 @@ public class Cat
         return timesMeow;
     }
 
-    public static Double getFoodAmount()
+    public  Double getFoodAmount()
     {
         return foodAmount;
     }
 
-    public static Double getDrinkAmount()
+    public  Double getDrinkAmount()
     {
         return drinkAmount;
     }
 
-    public static Double getWeight()
+    public  Double getWeight()
 
     {
         return weight;
@@ -124,7 +133,7 @@ public class Cat
         return count;
     }
 
-    public static String getStatus()
+    public  String getStatus()
     {
         if(weight < minWeight)
         {

@@ -10,35 +10,34 @@ public class Loader
 
         while (!Cat.isDead)
         {
-            Cat.meow();
+           rex.meow();
         }
 
-        System.out.println(Cat.getStatus());
-        System.out.println(Cat.getWeight());
+        System.out.println(rex.getStatus());
+        System.out.println(rex.getWeight());
         System.out.println("Кошка мяукнула " + rex.getTimesMeow() + " раз перед смертью.");
         System.out.println("Сейчас живо кошек: " + Cat.getDeadCatCount());
 
-        getKitten();
-        Cat.setName("Barsik");
-        System.out.println(Cat.getName() + " is now " + Cat.getStatus() + " and weights " + Cat.getWeight());
+        //Создаем котенка
+        Cat roma = getKitten();
+        System.out.println("Вес Ромы " + roma.getWeight());
+        roma.feed(100.0);
+        System.out.println("Вес Ромы " + roma.getWeight());
 
-        getKitten();
-        Cat.setName("Karasik");
-        System.out.println(Cat.getName() + " is now " + Cat.getStatus() + " and weights " + Cat.getWeight());
-
-        getKitten();
-        Cat.setName("Pupsik");
-        Cat.setColour("BLACK");
-        System.out.println(Cat.getName() + " is now " + Cat.getStatus() + " and weights " + Cat.getWeight());
-        Cat.meow();
-        System.out.println(Cat.getWeight());
-        System.out.println(Cat.getColour());
-
-
+        //Копируем котенка
+        Cat lisa = new Cat();
+        System.out.println("Вес Лизы " + lisa.getWeight());
+        Cat belfegor = lisa.catCopy();
+        System.out.println("Вес Бельфегора " + belfegor.getWeight());
+        lisa.feed(1000.0);
+        System.out.println("После кормления вес Лизы составил " + lisa.getWeight());
+        System.out.println("Бельфегор всё еще весит  " + belfegor.getWeight() +
+                            " и это доказывает, что это разные кошки");
     }
 
     private static Cat getKitten() {
       return new Cat (1100.00);
     }
+
 
 }
