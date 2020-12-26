@@ -28,16 +28,19 @@ public class Cat
     }
 
     public Cat(double weight) {
+        this();
         this.weight = weight;
     }
 
-    public Cat catCopy() {
+    public Cat catCopy()
+    {
         Cat catCopy = new Cat (this.weight);
         catCopy.originWeight = this.originWeight;
         catCopy.minWeight = this.minWeight;
         catCopy.maxWeight = this.maxWeight;
         count++;
         return catCopy;
+
     }
 
     public  String setColour(String colour) {

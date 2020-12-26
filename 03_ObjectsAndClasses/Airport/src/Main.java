@@ -1,5 +1,4 @@
 import com.skillbox.airport.Airport;
-import java.util.*;
 public class Main {
 
 
