@@ -3,12 +3,12 @@ public class Loader
 {
     public static void main(String[] args)
     {
-
+    Cat george = new Cat();
     Cat rex = new Cat();
 
         System.out.println("Сейчас живо кошек: " + Cat.getDeadCatCount());
 
-        while (!Cat.isDead)
+        while (!rex.isDead)
         {
            rex.meow();
         }
@@ -16,6 +16,9 @@ public class Loader
         System.out.println(rex.getStatus());
         System.out.println(rex.getWeight());
         System.out.println("Кошка мяукнула " + rex.getTimesMeow() + " раз перед смертью.");
+        rex.meow();
+        rex.meow();
+        george.meow();
         System.out.println("Сейчас живо кошек: " + Cat.getDeadCatCount());
 
         //Создаем котенка
@@ -33,6 +36,7 @@ public class Loader
         System.out.println("После кормления вес Лизы составил " + lisa.getWeight());
         System.out.println("Бельфегор всё еще весит  " + belfegor.getWeight() +
                             " и это доказывает, что это разные кошки");
+        System.out.println("Сейчас живо кошек: " + Cat.getDeadCatCount());
     }
 
     private static Cat getKitten() {
