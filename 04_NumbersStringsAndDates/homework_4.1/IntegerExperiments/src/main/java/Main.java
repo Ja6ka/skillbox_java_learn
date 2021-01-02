@@ -20,7 +20,11 @@ public class Main {
    */
 
   public static int sumDigits(Integer number) {
+<<<<<<< HEAD
 
+=======
+    //@TODO: write code here and delete TODO line
+>>>>>>> 509af769169aaef1d9e08d07418e5c93e69bdab3
     return 0;
   }
 }
