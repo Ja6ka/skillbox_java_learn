@@ -37,6 +37,9 @@ public class Loader
         System.out.println("Бельфегор всё еще весит  " + belfegor.getWeight() +
                             " и это доказывает, что это разные кошки");
         System.out.println("Сейчас живо кошек: " + Cat.getDeadCatCount());
+
+        rex.setColour(Colours.BLACK);
+        System.out.println(rex.getColour());
     }
 
     private static Cat getKitten() {
