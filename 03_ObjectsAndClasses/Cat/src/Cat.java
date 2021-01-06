@@ -64,14 +64,11 @@ public class Cat
     public  void meow() {
         if (isDead) {
             System.out.println("Dead cat cannot meow");
-        } else if(weight > minWeight && weight < maxWeight) {
+            return;
+        } else {
             weight = weight - 45;
             timesMeow = ++timesMeow;
             System.out.println("Meow");
-        } else {
-            System.out.println("You killed the cat!");
-            isDead = true;
-            count--;
         }
         if (weight < minWeight || weight > maxWeight) {
             System.out.println("You killed the cat!");
@@ -83,14 +80,11 @@ public class Cat
     public  void feed(Double amount) {
         if (isDead) {
             System.out.println("Dead cat cannot eat");
-        } else if(weight > minWeight && weight < maxWeight) {
+            return;
+        } else {
             weight = weight + amount;
             foodAmount = foodAmount + amount;
             System.out.println("Yum");
-        } else {
-            System.out.println("You killed the cat!");
-            isDead = true;
-            count--;
         }
         if (weight < minWeight || weight > maxWeight) {
             System.out.println("You killed the cat!");
@@ -102,15 +96,12 @@ public class Cat
     public  void drink(Double amount) {
         if (isDead) {
             System.out.println("Dead cat cannot drink");
-        } else if(weight > minWeight && weight < maxWeight) {
+            return;
+        } else {
             weight = weight + amount;
             drinkAmount = drinkAmount + amount;
             System.out.println("Surp");
-        } else {
-            System.out.println("You killed the cat!");
-            isDead = true;
-            count--;
-        }
+                }
         if (weight < minWeight || weight > maxWeight) {
             System.out.println("You killed the cat!");
             isDead = true;
@@ -121,14 +112,11 @@ public class Cat
     public  void pee () {
         if (isDead) {
             System.out.println("Dead cat cannot pee");
-        } else if(weight > minWeight && weight < maxWeight) {
+            return;
+        } else {
                 weight = weight - 100;
                 System.out.println("Peeee");
-            } else {
-                System.out.println("You killed the cat!");
-                isDead = true;
-                count--;
-            }
+                }
         if (weight < minWeight || weight > maxWeight) {
             System.out.println("You killed the cat!");
             isDead = true;
@@ -156,7 +144,7 @@ public class Cat
         return weight;
     }
 
-    public static int getDeadCatCount()
+    public static int getCatCount()
     {
         return count;
     }
