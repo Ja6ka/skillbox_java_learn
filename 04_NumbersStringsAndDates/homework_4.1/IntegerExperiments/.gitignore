@@ -1,1 +1,6 @@
 /target
+*.iml
+*.xml
+*.jar
+.fastutil-7.0.12.jar
+04_NumbersStringsAndDates/.idea/
