@@ -6,7 +6,7 @@ public class Loader
     Cat george = new Cat();
     Cat rex = new Cat();
 
-        System.out.println("Сейчас живо кошек: " + Cat.getDeadCatCount());
+        System.out.println("Сейчас живо кошек: " + Cat.getCatCount());
 
         while (!rex.isDead)
         {
@@ -19,7 +19,7 @@ public class Loader
         rex.meow();
         rex.meow();
         george.meow();
-        System.out.println("Сейчас живо кошек: " + Cat.getDeadCatCount());
+        System.out.println("Сейчас живо кошек: " + Cat.getCatCount());
 
         //Создаем котенка
         Cat roma = getKitten();
@@ -36,7 +36,10 @@ public class Loader
         System.out.println("После кормления вес Лизы составил " + lisa.getWeight());
         System.out.println("Бельфегор всё еще весит  " + belfegor.getWeight() +
                             " и это доказывает, что это разные кошки");
-        System.out.println("Сейчас живо кошек: " + Cat.getDeadCatCount());
+        System.out.println("Сейчас живо кошек: " + Cat.getCatCount());
+
+        rex.setColour(Colours.BLACK);
+        System.out.println(rex.getColour());
     }
 
     private static Cat getKitten() {

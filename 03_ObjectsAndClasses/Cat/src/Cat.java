@@ -14,7 +14,7 @@ public class Cat
     public int timesMeow;
     public static int count;
     public boolean isDead;
-    public String colour;
+    public Colours colour;
     public String name;
 
     //==============================================================================
@@ -42,13 +42,11 @@ public class Cat
 
     }
 
-    public  String setColour(String colour) {
+    public void setColour(Colours colour) {
         this.colour = colour;
-        return colour;
     }
 
-    public  String getColour() {
-        this.colour = colour;
+    public  Colours getColour() {
         return colour;
     }
 
@@ -66,11 +64,13 @@ public class Cat
     public  void meow() {
         if (isDead) {
             System.out.println("Dead cat cannot meow");
-        } else if(weight > minWeight && weight < maxWeight) {
-            weight = weight - 50;
+            return;
+        } else {
+            weight = weight - 45;
             timesMeow = ++timesMeow;
             System.out.println("Meow");
-        } else {
+        }
+        if (weight < minWeight || weight > maxWeight) {
             System.out.println("You killed the cat!");
             isDead = true;
             count--;
@@ -80,11 +80,13 @@ public class Cat
     public  void feed(Double amount) {
         if (isDead) {
             System.out.println("Dead cat cannot eat");
-        } else if(weight > minWeight && weight < maxWeight) {
+            return;
+        } else {
             weight = weight + amount;
             foodAmount = foodAmount + amount;
             System.out.println("Yum");
-        } else {
+        }
+        if (weight < minWeight || weight > maxWeight) {
             System.out.println("You killed the cat!");
             isDead = true;
             count--;
@@ -94,11 +96,13 @@ public class Cat
     public  void drink(Double amount) {
         if (isDead) {
             System.out.println("Dead cat cannot drink");
-        } else if(weight > minWeight && weight < maxWeight) {
+            return;
+        } else {
             weight = weight + amount;
             drinkAmount = drinkAmount + amount;
             System.out.println("Surp");
-        } else {
+                }
+        if (weight < minWeight || weight > maxWeight) {
             System.out.println("You killed the cat!");
             isDead = true;
             count--;
@@ -108,14 +112,16 @@ public class Cat
     public  void pee () {
         if (isDead) {
             System.out.println("Dead cat cannot pee");
-        } else if(weight > minWeight && weight < maxWeight) {
+            return;
+        } else {
                 weight = weight - 100;
                 System.out.println("Peeee");
-            } else {
-                System.out.println("You killed the cat!");
-                isDead = true;
-                count--;
-            }
+                }
+        if (weight < minWeight || weight > maxWeight) {
+            System.out.println("You killed the cat!");
+            isDead = true;
+            count--;
+        }
         }
 
     public int getTimesMeow() {
@@ -138,7 +144,7 @@ public class Cat
         return weight;
     }
 
-    public static int getDeadCatCount()
+    public static int getCatCount()
     {
         return count;
     }

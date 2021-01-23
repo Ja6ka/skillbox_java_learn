@@ -537,6 +537,9 @@ public class TestTrucksContainersAndBoxes {
         assertTimeoutPreemptively(
                 Duration.ofSeconds(TEST_TIMEOUT_SECONDS),
                 () -> Main.main(new String[0]));
+<<<<<<< HEAD
+        assertEquals(expected.strip(), outContent.toString().strip(), message);
+=======
         assertEquals(
                 expected.strip(),
                 outContent
@@ -545,6 +548,7 @@ public class TestTrucksContainersAndBoxes {
                         .replaceAll("\r\n", "\n")
                         .replaceAll("\n", System.lineSeparator()),
                 message);
+>>>>>>> 509af769169aaef1d9e08d07418e5c93e69bdab3
     }
 
     /* overload    */

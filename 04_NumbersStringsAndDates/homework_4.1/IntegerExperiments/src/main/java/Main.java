@@ -20,6 +20,7 @@ public class Main {
    */
 
   public static int sumDigits(Integer number) {
+<<<<<<< HEAD
     String numberString = Integer.toString(number);
     String [] a = numberString.split("");
     int sum = 0;
@@ -27,5 +28,13 @@ public class Main {
        sum+=Integer.parseInt(a[i]);
      }
      return sum;
+=======
+
+    int sumDigits = 0;
+
+    return 0;
+>>>>>>> 1d399a556556f69506287135412cae59fe4ea417
   }
+
+
 }
