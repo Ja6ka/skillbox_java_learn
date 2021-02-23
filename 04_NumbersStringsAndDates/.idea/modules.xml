@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/homework_4.1/IntegerExperiments/01_sumdigits.iml" filepath="$PROJECT_DIR$/homework_4.1/IntegerExperiments/01_sumdigits.iml" />
       <module fileurl="file://$PROJECT_DIR$/homework_4.1/IntegerExperiments/src/test/01_sumdigits (1).iml" filepath="$PROJECT_DIR$/homework_4.1/IntegerExperiments/src/test/01_sumdigits (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/04_NumbersStringsAndDates.iml" filepath="$PROJECT_DIR$/04_NumbersStringsAndDates.iml" />
     </modules>
   </component>
 </project>
