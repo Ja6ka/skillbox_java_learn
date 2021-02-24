@@ -5,21 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c805865-b060-46c4-9fba-1d86e5cd8378" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/04_NumbersStringsAndDates.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_4.1/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_4.1/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_4.2/.idea/homework_4.2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework_4.1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/homework_4.1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework_4.1/IntegerExperiments/src/main/java/Container.java" beforeDir="false" afterPath="$PROJECT_DIR$/homework_4.1/IntegerExperiments/src/main/java/Container.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework_4.1/IntegerExperiments/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/homework_4.1/IntegerExperiments/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework_4.2/Minmax/src/Minmax.java" beforeDir="false" afterPath="$PROJECT_DIR$/homework_4.2/Minmax/src/Minmax.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
