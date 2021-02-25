@@ -5,20 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46b10ba9-97ab-4ab2-af4c-dfbc3a0b5604" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../04_NumbersStringsAndDates.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/homework_4.1.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IntegerExperiments/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/IntegerExperiments/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IntegerExperiments/src/main/main9.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IntegerExperiments/src/test/test10.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../homework_4.2/Minmax/src/Minmax.java" beforeDir="false" afterPath="$PROJECT_DIR$/../homework_4.2/Minmax/src/Minmax.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/Minmax.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/Minmax.class" afterDir="false" />
     </list>
     <list id="69ed5b02-28c2-4ed9-9b72-f76047edeede" name="added Minmax homework 4.2" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +37,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../homework_4.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../homework_4.3" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
