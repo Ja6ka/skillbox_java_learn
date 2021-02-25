@@ -5,8 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c805865-b060-46c4-9fba-1d86e5cd8378" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_NumbersStringsAndDates.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework_4.1/.idea/homework_4.1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework_4.1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework_4.1/IntegerExperiments/01_sumdigits.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework_4.1/IntegerExperiments/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/homework_4.1/IntegerExperiments/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework_4.1/IntegerExperiments/src/main/main9.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework_4.1/IntegerExperiments/src/test/test10.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/homework_4.2/Minmax/src/Minmax.java" beforeDir="false" afterPath="$PROJECT_DIR$/homework_4.2/Minmax/src/Minmax.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Minmax.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Minmax.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,10 +53,10 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+    <property name="settings.editor.selected.configurable" value="android.project.structure" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -108,5 +119,8 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Main_java$Main.ic" NAME="Main Coverage Results" MODIFIED="1614251576612" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

@@ -7,8 +7,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="01_sumdigits (1)" />
-        <module name="04_NumbersStringsAndDates" />
-        <module name="01_sumdigits" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

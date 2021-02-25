@@ -4,8 +4,11 @@ public class Main {
     Container container = new Container();
     container.count += 7843;
 
-    int sum = sumDigits(303030);
-
+    Integer number = 999999568;
+    int sum = sumDigits(number);
+    do {
+        sum = sumDigits(sum);
+    } while (sum >9);
     System.out.println(sum);
   }
 
@@ -23,8 +26,8 @@ public class Main {
     String numberString = Integer.toString(number);
     String [] a = numberString.split("");
     int sum = 0;
-     for (int i =0; i< a.length; i++){
-       sum+=Integer.parseInt(a[i]);
+         for (int i =0; i< a.length; i++) {
+             sum+=Integer.parseInt(a[i]);
      }
      return sum;
   }
