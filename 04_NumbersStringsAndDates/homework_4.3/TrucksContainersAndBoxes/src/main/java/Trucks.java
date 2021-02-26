@@ -22,24 +22,23 @@ public class Trucks {
         } else truckCount = containerCount / truckCapacity;
 
         System.out.println("Нужно " + containerCount + " контейнеров и " + truckCount + " грузовиков");
-
-            int a = 1;
-            int b = 1;
-            for (int t = 1; t <= truckCount; t++) {
-                System.out.println("Грузовик: " + t);
-                int c = 0;
-                while (c < 12 && b <= containerCount) {
-                    System.out.println("\tКонтейнер: " + b);
-                    int d = 0;
-                    while (d < 27 && a <= boxCount) {
-                        System.out.println("\t \tЯщик: " + a);
-                        a++;
-                        d++;
-                    }
-                    b++;
-                    c++;
+        int a = 1;
+        int b = 1;
+        for (int t = 1; t <= truckCount; t++) {
+            System.out.println("Грузовик: " + t);
+            int c = 0;
+            while (c < 12 && b <= containerCount) {
+                System.out.println("\tКонтейнер: " + b);
+                int d = 0;
+                while (d < 27 && a <= boxCount) {
+                    System.out.println("\t \tЯщик: " + a);
+                    a++;
+                    d++;
                 }
+                b++;
+                c++;
             }
+        }
     }
 }
 
