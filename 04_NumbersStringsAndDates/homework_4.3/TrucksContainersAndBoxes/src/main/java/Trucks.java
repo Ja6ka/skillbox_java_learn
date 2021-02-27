@@ -2,24 +2,23 @@ import java.util.Scanner;
 
 public class Trucks {
 
-
+    private static final int CONTAINER_CAPACITY = 27; //количество ящиков в контейнере
+    private static final int TRUCK_CAPACITY = 12; //количество контейнеров в грузовике
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String boxes = scanner.nextLine();
 
         int boxCount = Integer.parseInt(boxes);
-        int containerCapacity = 27; // Коробок
-        int truckCapacity = 12; // Контейнеров
         int containerCount = 0;
         int truckCount = 0;
 
-        if ((boxCount % containerCapacity) != 0) {
-            containerCount = (boxCount / containerCapacity) + 1;
-        } else containerCount = boxCount / containerCapacity;
+        if ((boxCount % CONTAINER_CAPACITY) != 0) {
+            containerCount = (boxCount / CONTAINER_CAPACITY) + 1;
+        } else containerCount = boxCount / CONTAINER_CAPACITY;
 
-        if ((containerCount % truckCapacity) != 0) {
-            truckCount = (containerCount / truckCapacity) + 1;
-        } else truckCount = containerCount / truckCapacity;
+        if ((containerCount % TRUCK_CAPACITY) != 0) {
+            truckCount = (containerCount / TRUCK_CAPACITY) + 1;
+        } else truckCount = containerCount / TRUCK_CAPACITY;
 
         System.out.println("Нужно " + containerCount + " контейнеров и " + truckCount + " грузовиков");
         int a = 1;
