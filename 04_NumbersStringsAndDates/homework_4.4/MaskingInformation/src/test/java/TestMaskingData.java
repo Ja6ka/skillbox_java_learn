@@ -22,7 +22,7 @@ public class TestMaskingData {
   @DisplayName("Текст = Номер кредитной карты <4008 1234 5678> 8912")
   void maskingCreditCard() {
     String expected = "Номер кредитной карты *** 8912";
-    String actual = Main
+    String actual = Diamonds
         .searchAndReplaceDiamonds("Номер кредитной карты <4008 1234 5678> 8912", PLACEHOLDER);
     assertEquals(expected, actual);
   }
@@ -31,7 +31,7 @@ public class TestMaskingData {
   @DisplayName("Текст = Пин код <6160>")
   void maskingPinCode() {
     String expected = "Пин код +++";
-    String actual = Main.searchAndReplaceDiamonds("Пин код <6160>", "+++");
+    String actual = Diamonds.searchAndReplaceDiamonds("Пин код <6160>", "+++");
     assertEquals(expected, actual);
   }
 
@@ -39,7 +39,7 @@ public class TestMaskingData {
   @DisplayName("Текст = Номер паспорта <45 08 361>513")
   void maskingPassportNumber() {
     String expected = "Номер паспорта ***513";
-    String actual = Main.searchAndReplaceDiamonds("Номер паспорта <45 08 361>513", PLACEHOLDER);
+    String actual = Diamonds.searchAndReplaceDiamonds("Номер паспорта <45 08 361>513", PLACEHOLDER);
     assertEquals(expected, actual);
   }
 
@@ -47,7 +47,7 @@ public class TestMaskingData {
   @DisplayName("Текст = Номер паспорта <<45 08 36513")
   void noMatchingBracket() {
     String expected = "Номер паспорта <<45 08 36513";
-    String actual = Main.searchAndReplaceDiamonds(expected, PLACEHOLDER);
+    String actual = Diamonds.searchAndReplaceDiamonds(expected, PLACEHOLDER);
     assertEquals(expected, actual);
   }
 
@@ -55,14 +55,14 @@ public class TestMaskingData {
   @DisplayName("Текст = Номер паспорта 45 08 36513")
   void noBracketInput() {
     String expected = "Номер паспорта 45 08 36513";
-    String actual = Main.searchAndReplaceDiamonds("Номер паспорта 45 08 36513", PLACEHOLDER);
+    String actual = Diamonds.searchAndReplaceDiamonds("Номер паспорта 45 08 36513", PLACEHOLDER);
     assertEquals(expected, actual);
   }
 
   @Test
   @DisplayName("Текст = \"\"")
   void emptyString() {
-    String actual = Main.searchAndReplaceDiamonds(EMPTY_STRING, PLACEHOLDER);
+    String actual = Diamonds.searchAndReplaceDiamonds(EMPTY_STRING, PLACEHOLDER);
     assertEquals(EMPTY_STRING, actual);
   }
 
@@ -70,7 +70,7 @@ public class TestMaskingData {
   @DisplayName("Задание со * = Номер кредитной карты <4008> 1234 <5678> 8912")
   void doubleBracket() {
     String expected = "Номер кредитной карты *** 1234 *** 8912";
-    String actual = Main
+    String actual = Diamonds
         .searchAndReplaceDiamonds("Номер кредитной карты <4008> 1234 <5678> 8912", PLACEHOLDER);
     assertEquals(expected, actual);
   }
@@ -80,7 +80,7 @@ public class TestMaskingData {
   void checkRegularExpression() {
     final List<String> lines = new ArrayList<>();
     try {
-      Path path = Paths.get("src", "main", "java", "Main.java");
+      Path path = Paths.get("src", "main", "java", "Diamonds.java");
       lines.addAll(Files.readAllLines(path));
     } catch (IOException e) {
       e.printStackTrace();

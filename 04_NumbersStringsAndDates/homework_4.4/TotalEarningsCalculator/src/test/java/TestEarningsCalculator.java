@@ -51,7 +51,7 @@ public class TestEarningsCalculator {
   void checkRegularExpression() {
     final List<String> lines = new ArrayList<>();
     try {
-      Path path = Paths.get("src", "main", "java", "Main.java");
+      Path path = Paths.get("src", "main", "java", "Earnings.java");
       lines.addAll(Files.readAllLines(path));
     } catch (IOException e) {
       e.printStackTrace();
@@ -82,7 +82,7 @@ public class TestEarningsCalculator {
   private void launchApplication(String expected) {
     assertTimeoutPreemptively(
         Duration.ofSeconds(TEST_TIMEOUT_SECONDS),
-        () -> Main.main(new String[0]));
+        () -> Earnings.main(new String[0]));
     assertEquals(expected, outContent.toString().strip(), WRONG_SUM);
   }
 
