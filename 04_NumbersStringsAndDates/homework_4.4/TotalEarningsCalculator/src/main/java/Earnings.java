@@ -15,8 +15,8 @@ public class Earnings {
 
     int e = text.trim().lastIndexOf(' ', 57);
     int f = text.trim().lastIndexOf('р', 70);
-
     String masha = text.trim().substring(e + 1, f - 1);
+
     System.out.println(Integer.parseInt(vasya.trim()) + Integer.parseInt(petya.trim()) + Integer.parseInt(masha.trim()));
   }
 }
