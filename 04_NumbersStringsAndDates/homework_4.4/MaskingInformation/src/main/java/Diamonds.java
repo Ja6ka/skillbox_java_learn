@@ -6,6 +6,7 @@ public class Diamonds {
         String safe = searchAndReplaceDiamonds("Номер кредитной карты <1234 6748 4638> 4654", "***");
         System.out.println(safe);
     }
+
     public static String searchAndReplaceDiamonds(String text, String placeholder) {
         if (!text.contains("<") || !text.contains(">") || text.contains("<<") || text.contains(">>")) {
             System.out.println(text);

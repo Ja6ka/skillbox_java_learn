@@ -20,7 +20,7 @@ public class Main {
             String surname = fio.substring(0, indexOfSpace1);
             String patronymic = fio.substring(indexOfSpace2);
 
-            if (name.trim().contains(" ") || surname.trim().contains(" ") || patronymic.trim().contains(" ")) {
+            if (name.trim().contains(" ")) {
                 System.out.println("Введенная строка не является ФИО");
                 break;
             }
