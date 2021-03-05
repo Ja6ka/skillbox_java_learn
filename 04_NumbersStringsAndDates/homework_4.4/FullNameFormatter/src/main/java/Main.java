@@ -24,6 +24,9 @@ public class Main {
                          break;
                     }
                 }
+                if (digit == 1) {
+                    break;
+                }
 
                 if ( digit == 0) {
                     int indexOfSpace1 = fio.indexOf(' ');
@@ -39,9 +42,10 @@ public class Main {
                     String patronymic = fio.substring(indexOfSpace2);
                     if (name.trim().contains(" ")  || name.equals("")) {
                         System.out.println("Введенная строка не является ФИО");
-                        break;
+                    } else {
+                        System.out.println("Фамилия: " + surname.trim() + "\nИмя: " + name.trim() + "\nОтчество: " + patronymic.trim());
                     }
-                    System.out.println("Фамилия: " + surname.trim() + "\nИмя: " + name.trim() + "\nОтчество: " + patronymic.trim());
+                    break;
                 }
         }
     }
