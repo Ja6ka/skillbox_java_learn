@@ -4,7 +4,7 @@ import java.util.regex.Pattern;
 public class Main {
 
     public static void main(String[] args) {
-        String string = splitTextIntoWords("With New York reopening after nearly a year, cinema operators hope that Los Angeles will follow. That might convince the film studios to stop postponing the release dates for the big Hollywood movies that are such a big draw for audiences.\n" +
+        String string = splitTextIntoWords("With' it's New York reopening after nearly a year, cinema operators hope that Los Angeles will follow. That might convince the film studios to stop postponing the release dates for the big Hollywood movies that are such a big draw for audiences.\n" +
                 "\n" +
                 "\"New York theatres opening is huge,\" says Paul Serwitz, president of Landmark Theatres, a chain of 45 theatres focused on independent films, which will reopen its New York venue, Quad Cinema, on Friday.\n" +
                 "\n" +
@@ -21,16 +21,14 @@ public class Main {
         if (text.length() == 0) {
             return "";
         }
-        String newText = text.replaceAll("[0-9{}|!?@.#%^&*(),_=+<>;:\"-]", " ");
-        String[] splitted = newText.split("\\s+");
-        String finalText = "";
-        StringBuilder textBuilder = new StringBuilder(finalText);
-        for (int i = 0; i < splitted.length; i++) {
-            textBuilder.append(splitted[i]).append(System.lineSeparator());
+        Matcher matcher = Pattern.compile("([a-zA-Z&&[^0-9]])+(’[a-zA-Z&&[^0-9]])?").matcher(text);
+        String newText = "";
+        StringBuilder textBuilder = new StringBuilder(newText);
+        while (matcher.find()) {
+            textBuilder.append(matcher.group()).append(System.lineSeparator());
         }
-        finalText = textBuilder.toString();
-        System.out.println(finalText.substring(0, finalText.length() - 1));
+        System.out.println(textBuilder);
+        String finalText = textBuilder.toString();
         return finalText.substring(0, finalText.length() - 1);
     }
-
 }
