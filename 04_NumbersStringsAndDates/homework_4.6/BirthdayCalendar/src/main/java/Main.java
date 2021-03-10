@@ -17,6 +17,10 @@ public class Main {
     public static String collectBirthdays(int year, int month, int day) {
         int count = 0;
         SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy - E", Locale.ENGLISH);
+<<<<<<< HEAD
+=======
+        SimpleDateFormat monthFormat = new SimpleDateFormat("MM");
+>>>>>>> fa2cb9094d5729469c5b22f37010d230c8745e67
         Calendar currentDate = Calendar.getInstance();
         Calendar birthday = Calendar.getInstance();
         birthday.set(Calendar.DATE, day);
