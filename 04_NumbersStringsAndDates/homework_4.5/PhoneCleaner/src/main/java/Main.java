@@ -5,7 +5,6 @@ import java.util.regex.Pattern;
 public class Main {
 
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
         while (true) {
             String input = scanner.nextLine();
@@ -17,9 +16,12 @@ public class Main {
                 System.out.println("Неверный формат номера");
                 break;
             }
-            String number = input.replaceAll("([\\p{Punct}])+", "");
-            number = number.replaceAll(" ", "");
-            String[] s = number.split("");
+            StringBuilder number = new StringBuilder();
+            Matcher digits = Pattern.compile("\\d+").matcher(input);
+            while (digits.find()) {
+                number.append(digits.group());
+            }
+            String[] s = number.toString().split("");
             if (number.length() == 11 && s[0].equals("7")) {
                 System.out.println(number);
             } else if (number.length() == 11 && s[0].equals("8")) {
