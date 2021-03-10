@@ -11,7 +11,7 @@ public class Main {
 
         int day = 20;
         int month = 12;
-        int year = 2021;
+        int year = 1996;
 
         System.out.println(collectBirthdays(year, month, day));
 
@@ -19,7 +19,7 @@ public class Main {
 
     public static String collectBirthdays(int year, int month, int day) {
         String birthdayDate = year + " " + month + " " + day;
-        DateTimeFormatter parser = DateTimeFormatter.ofPattern("yyyy MM dd");
+        DateTimeFormatter parser = DateTimeFormatter.ofPattern("yyyy M d");
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy - E", Locale.ENGLISH);
         LocalDate current = LocalDate.now();
         LocalDate birthday = LocalDate.parse(birthdayDate, parser);
@@ -28,7 +28,7 @@ public class Main {
             System.out.println("Неправильная дата рождения!");
         } else {
             int count = 0;
-            while (birthday.isBefore(current)) {
+            while (birthday.isBefore(current) || birthday.isEqual(current)) {
                 date.append(count).append(" - ").append(birthday.format(formatter)).append(System.lineSeparator());
                 birthday = birthday.plusYears(1);
                 count++;
