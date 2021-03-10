@@ -1,6 +1,9 @@
 import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Locale;
+import java.time.LocalDate;
 
 public class Main {
 
@@ -8,29 +11,29 @@ public class Main {
 
         int day = 20;
         int month = 12;
-        int year = 1996;
+        int year = 2021;
 
         System.out.println(collectBirthdays(year, month, day));
 
     }
 
     public static String collectBirthdays(int year, int month, int day) {
-        int count = 0;
-        SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy - E", Locale.ENGLISH);
-        Calendar currentDate = Calendar.getInstance();
-        Calendar birthday = Calendar.getInstance();
-        birthday.set(Calendar.DATE, day);
-        birthday.set(Calendar.MONTH, month - 1);
-        birthday.set(Calendar.YEAR, year);
-        StringBuilder text = new StringBuilder();
-        if (birthday.getTimeInMillis() > currentDate.getTimeInMillis()) {
-            return "";
+        String birthdayDate = year + " " + month + " " + day;
+        DateTimeFormatter parser = DateTimeFormatter.ofPattern("yyyy MM dd");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy - E", Locale.ENGLISH);
+        LocalDate current = LocalDate.now();
+        LocalDate birthday = LocalDate.parse(birthdayDate, parser);
+        StringBuilder date = new StringBuilder();
+        if (birthday.isAfter(current)) {
+            System.out.println("Неправильная дата рождения!");
+        } else {
+            int count = 0;
+            while (birthday.isBefore(current)) {
+                date.append(count).append(" - ").append(birthday.format(formatter)).append(System.lineSeparator());
+                birthday = birthday.plusYears(1);
+                count++;
+            }
         }
-        for (birthday.getWeekYear(); birthday.getTimeInMillis() <= currentDate.getTimeInMillis(); ) {
-            text.append(count).append(" - ").append(format.format(birthday.getTime())).append(System.lineSeparator());
-            count++;
-            birthday.add(Calendar.YEAR, 1);
-        }
-        return text.toString();
+        return date.toString();
     }
 }
