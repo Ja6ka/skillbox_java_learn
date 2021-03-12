@@ -16,18 +16,14 @@ public class Main {
             while (digits.find()) {
                 number.append(digits.group());
             }
-            StringBuilder normal = new StringBuilder();
-            Matcher tester = Pattern.compile("\\d+").matcher(number);
-            while (tester.find()) {
-                normal.append(tester.group());
-            }
-            if (tester.find()) {
-                if (normal.toString().charAt(0) == 7) {
-                    System.out.println(normal);
-                } else if (normal.toString().charAt(0) == 8) {
-                    System.out.println("7" + normal.substring(1));
-                } else if (normal.toString().charAt(0) == 9) {
-                    System.out.println("7" + normal);
+            String normalizedNumber = number.toString().replaceAll("[ ()+-]", "");
+            if (digits.matches()) {
+                if (normalizedNumber.charAt(0) == '7') {
+                    System.out.println(normalizedNumber);
+                } else if (normalizedNumber.charAt(0) == '8') {
+                    System.out.println("7" + normalizedNumber.substring(1));
+                } else if (normalizedNumber.charAt(0) == '9') {
+                    System.out.println("7" + normalizedNumber);
                 }
             } else {
                 System.out.println("Неверный формат номера");
