@@ -21,13 +21,14 @@ public class Main {
             while (tester.find()) {
                 normal.append(tester.group());
             }
-            String[] s = normal.toString().split("");
-            if (normal.length() == 11 && s[0].equals("7")) {
-                System.out.println(normal);
-            } else if (normal.length() == 11 && s[0].equals("8")) {
-                System.out.println("7" + normal.substring(1));
-            } else if (normal.length() == 10) {
-                System.out.println("7" + normal);
+            if (tester.find()) {
+                if (normal.toString().charAt(0) == 7) {
+                    System.out.println(normal);
+                } else if (normal.toString().charAt(0) == 8) {
+                    System.out.println("7" + normal.substring(1));
+                } else if (normal.toString().charAt(0) == 9) {
+                    System.out.println("7" + normal);
+                }
             } else {
                 System.out.println("Неверный формат номера");
             }
