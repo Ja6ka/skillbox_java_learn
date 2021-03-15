@@ -2,6 +2,9 @@ import java.util.Arrays;
 
 public class Hospital {
 
+    public static final double MIN_HEALTH_TEMPERATURE = 36.2;
+    private static final double MAX_HEALTH_TEMPERATURE = 37;
+
     public static float[] generatePatientsTemperatures(int patientsCount) {
 
         float[] temperatures = new float[patientsCount];
@@ -22,7 +25,7 @@ public class Hospital {
 
         int healthCount = 0;
         for (float temperatureDatum : temperatureData) {
-            if (temperatureDatum >= 36.2 && temperatureDatum <= 37) {
+            if (temperatureDatum >= MIN_HEALTH_TEMPERATURE && temperatureDatum <= MAX_HEALTH_TEMPERATURE) {
                 healthCount++;
             }
         }
