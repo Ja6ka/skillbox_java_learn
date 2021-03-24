@@ -11,56 +11,56 @@ import ru.skillbox.computerEnum.processor.Vendor;
 public class Computer {
 
 
-    private  final String VENDOR;
-    private  final String NAME;
+    private final String VENDOR;
+    private final String NAME;
 
     private String computerInfo = "";
     private int totalWeight;
 
     private int processorFrequency; //В Ггц
     private int coreCount;
-    private String processorVendor;
+    private Vendor processorVendor;
     private int processorWeight;
 
-    private String memoryType;
+    private TypeOfRAM memoryType;
     private int memoryAmount; //В гигабайтах
     private int memoryWeight;
 
-    private String driveType;
+    private TypeOfDrive driveType;
     private int driveAmount; //В гигабайтах
     private int driveWeight;
 
     private int displayDiagonal;
-    private String displayType;
+    private TypeOfDisplay displayType;
     private int displayWeight;
 
-    private String keyboardType;
-    private String keyboardLight;
+    private TypeOfKeyboard keyboardType;
+    private Light keyboardLight;
     private int keyboardWeight;
 
     public Computer(String vendor, String name) {
         VENDOR = vendor;
         NAME = name;
-        computerInfo = "Информация о компьютере марки " + VENDOR + " модели " + NAME + ":"+ System.lineSeparator();
+        computerInfo = "Информация о компьютере марки " + VENDOR + " модели " + NAME + ":" + System.lineSeparator();
     }
 
     public void addProcessor(int processorFrequency, int coreCount, Vendor processorVendor, int processorWeight) {
         this.processorFrequency = processorFrequency;
         this.coreCount = coreCount;
-        this.processorVendor = processorVendor.toString();
+        this.processorVendor = processorVendor;
         this.processorWeight = processorWeight;
         totalWeight = totalWeight + processorWeight;
     }
 
     public void addMemory(TypeOfRAM memoryType, int memoryAmount, int memoryWeight) {
-        this.memoryType = memoryType.toString();
+        this.memoryType = memoryType;
         this.memoryAmount = memoryAmount;
         this.memoryWeight = memoryWeight;
         totalWeight = totalWeight + memoryWeight;
     }
 
     public void addDrive(TypeOfDrive driveType, int driveAmount, int driveWeight) {
-        this.driveType = driveType.toString();
+        this.driveType = driveType;
         this.driveAmount = driveAmount;
         this.driveWeight = driveWeight;
         totalWeight = totalWeight + driveWeight;
@@ -68,44 +68,45 @@ public class Computer {
 
     public void addDisplay(int displayDiagonal, TypeOfDisplay displayType, int displayWeight) {
         this.displayDiagonal = displayDiagonal;
-        this.displayType = displayType.toString();
+        this.displayType = displayType;
         this.displayWeight = displayWeight;
         totalWeight = totalWeight + displayWeight;
     }
 
     public void addKeyboard(TypeOfKeyboard keyboardType, Light keyboardLight, int keyboardWeight) {
-        this.keyboardType = keyboardType.toString();
-        this.keyboardLight = keyboardLight.toString();
+        this.keyboardType = keyboardType;
+        this.keyboardLight = keyboardLight;
         this.keyboardWeight = keyboardWeight;
-        totalWeight= totalWeight + keyboardWeight;
+        totalWeight = totalWeight + keyboardWeight;
     }
 
     public void print() {
         System.out.println(
-                        computerInfo +
+                computerInfo +
                         "Процессор:" + System.lineSeparator() +
-                            "\tПроизводитель - " + processorVendor + System.lineSeparator() +
-                            "\tКоличество ядер - " + coreCount + System.lineSeparator() +
-                            "\tЧастота - " + processorFrequency + " Mhz" + System.lineSeparator() +
+                        "\tПроизводитель - " + processorVendor + System.lineSeparator() +
+                        "\tКоличество ядер - " + coreCount + System.lineSeparator() +
+                        "\tЧастота - " + processorFrequency + " Mhz" + System.lineSeparator() +
                         "Оперативная память: " + System.lineSeparator() +
-                            "\tТип памяти - " + memoryType + System.lineSeparator() +
-                            "\tОбъем памяти - " + memoryAmount + " Gb" + System.lineSeparator() +
+                        "\tТип памяти - " + memoryType + System.lineSeparator() +
+                        "\tОбъем памяти - " + memoryAmount + " Gb" + System.lineSeparator() +
                         "Хранилище данных:" + System.lineSeparator() +
-                            "\tТип носителя - " + driveType + System.lineSeparator() +
-                            "\tОбъем памяти - " + driveAmount + " Gb" + System.lineSeparator() +
+                        "\tТип носителя - " + driveType + System.lineSeparator() +
+                        "\tОбъем памяти - " + driveAmount + " Gb" + System.lineSeparator() +
                         "Монитор: " + System.lineSeparator() +
-                            "\tДиагональ - " + displayDiagonal + " cm" + System.lineSeparator() +
-                            "\tТип матрицы - " + displayType + System.lineSeparator() +
+                        "\tДиагональ - " + displayDiagonal + " cm" + System.lineSeparator() +
+                        "\tТип матрицы - " + displayType + System.lineSeparator() +
                         "Клавиатура: " + System.lineSeparator() +
-                            "\tТип - " + keyboardType + System.lineSeparator() +
-                            "\tПодсветка - " + keyboardLight + System.lineSeparator() +
-                                "Вес компьютера: " + getTotalWeight()
+                        "\tТип - " + keyboardType + System.lineSeparator() +
+                        "\tПодсветка - " + keyboardLight + System.lineSeparator() +
+                        "Вес компьютера: " + getTotalWeight()
         );
     }
 
-    public int getTotalWeight () {
+    public int getTotalWeight() {
         return totalWeight;
     }
+
     public String getVENDOR() {
         return VENDOR;
     }
@@ -130,12 +131,12 @@ public class Computer {
         this.coreCount = coreCount;
     }
 
-    public String getProcessorVendor() {
+    public Vendor getProcessorVendor() {
         return processorVendor;
     }
 
     public void setProcessorVendor(Vendor processorVendor) {
-        this.processorVendor = processorVendor.toString();
+        this.processorVendor = processorVendor;
     }
 
     public int getProcessorWeight() {
@@ -146,12 +147,12 @@ public class Computer {
         this.processorWeight = processorWeight;
     }
 
-    public String getMemoryType() {
+    public TypeOfRAM getMemoryType() {
         return memoryType;
     }
 
     public void setMemoryType(TypeOfRAM memoryType) {
-        this.memoryType = memoryType.toString();
+        this.memoryType = memoryType;
     }
 
     public int getMemoryAmount() {
@@ -170,12 +171,12 @@ public class Computer {
         this.memoryWeight = memoryWeight;
     }
 
-    public String getDriveType() {
+    public TypeOfDrive getDriveType() {
         return driveType;
     }
 
     public void setDriveType(TypeOfDrive driveType) {
-        this.driveType = driveType.toString();
+        this.driveType = driveType;
     }
 
     public int getDriveAmount() {
@@ -202,12 +203,12 @@ public class Computer {
         this.displayDiagonal = displayDiagonal;
     }
 
-    public String getDisplayType() {
+    public TypeOfDisplay getDisplayType() {
         return displayType;
     }
 
     public void setDisplayType(TypeOfDisplay displayType) {
-        this.displayType = displayType.toString();
+        this.displayType = displayType;
     }
 
     public int getDisplayWeight() {
@@ -218,20 +219,20 @@ public class Computer {
         this.displayWeight = displayWeight;
     }
 
-    public String getKeyboardType() {
+    public TypeOfKeyboard getKeyboardType() {
         return keyboardType;
     }
 
     public void setKeyboardType(TypeOfKeyboard keyboardType) {
-        this.keyboardType = keyboardType.toString();
+        this.keyboardType = keyboardType;
     }
 
-    public String getKeyboardLight() {
+    public Light getKeyboardLight() {
         return keyboardLight;
     }
 
     public void setKeyboardLight(Light keyboardLight) {
-        this.keyboardLight = keyboardLight.toString();
+        this.keyboardLight = keyboardLight;
     }
 
     public int getKeyboardWeight() {
@@ -241,5 +242,4 @@ public class Computer {
     public void setKeyboardWeight(int keyboardWeight) {
         this.keyboardWeight = keyboardWeight;
     }
-
 }
