@@ -14,7 +14,7 @@ public class TodoList {
             todoList.add(index, todo);
             System.out.println("Добавлено!");
         } else {
-            System.out.println("Ошибка!");
+            add(todo);
         }
     }
 
