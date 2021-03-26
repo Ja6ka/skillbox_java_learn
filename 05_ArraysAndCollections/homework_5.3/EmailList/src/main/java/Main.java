@@ -1,33 +1,35 @@
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Main {
-    public static final String WRONG_EMAIL_ANSWER = "Неверный формат email";
-    
-    /* TODO:
-        Пример вывода списка Email, после ввода команды LIST в консоль:
-        test@test.com
-        hello@mail.ru
-        - каждый адрес с новой строки
-        - список должен быть отсортирован по алфавиту
-        - email в разных регистрах считается одинаковыми
-           hello@skillbox.ru == HeLLO@SKILLbox.RU
-        - вывод на печать должен быть в нижнем регистре
-           hello@skillbox.ru
-        Пример вывода сообщения об ошибке при неверном формате Email:
-        "Неверный формат email"
-    */
+
+    private static final EmailList mailList = new EmailList();
 
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
-        
+
         while (true) {
+            System.out.println("Введите *ADD* и нужный e-mail");
             String input = scanner.nextLine();
-            if (input.equals("0")) {
-                break;
+
+            input = input.replaceAll("\\s\\s", " ").trim();
+            Pattern pattern = Pattern.compile("([A-Z]*)(\\s+[A-Z]+@[A-Z]+\\.[A-Z]+)?", Pattern.CASE_INSENSITIVE);
+            Matcher matcher = pattern.matcher(input);
+
+            while (matcher.find()) {
+                String command = matcher.group(1);
+                String email = matcher.group(2);
+
+                if (command.equals("ADD")) {
+                    mailList.add(email);
+                }
+
+                if (command.equals("LIST")) {
+                    mailList.list();
+                }
             }
-            
-            //TODO: write code here
-            
         }
     }
 }

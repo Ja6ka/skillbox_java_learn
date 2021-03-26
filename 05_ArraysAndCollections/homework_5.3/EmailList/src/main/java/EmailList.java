@@ -1,15 +1,26 @@
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class EmailList {
 
+    public static final String WRONG_EMAIL_ANSWER = "Неверный формат email";
+    private static final Set<String> emails = new TreeSet<>();
+
     public void add(String email) {
-        // TODO: валидный формат email добавляется
+        if (email != null && !emails.contains(email.toLowerCase())) {
+            emails.add(email.toLowerCase());
+            System.out.println("e-mail добавлен!");
+        } else {
+            System.out.println(WRONG_EMAIL_ANSWER);
+        }
     }
 
-    public List<String> getSortedEmails() {
-        // TODO: возвращается список электронных адресов в алфавитном порядке
-        return Collections.emptyList();
+    public void list() {
+        for (String email : emails) {
+            System.out.println(email);
+        }
     }
 
+    public Set<String> getSortedEmails() {
+        return emails;
+    }
 }
