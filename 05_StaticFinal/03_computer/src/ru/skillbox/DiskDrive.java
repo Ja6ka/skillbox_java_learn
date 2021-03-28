@@ -4,31 +4,31 @@ import ru.skillbox.computerEnum.drive.TypeOfDrive;
 
 public class DiskDrive {
 
-    private static TypeOfDrive driveType;
-    private static int driveAmount; //В гигабайтах
-    private static int driveWeight;
+    private  TypeOfDrive driveType;
+    private  int driveAmount; //В гигабайтах
+    private  int driveWeight;
 
-    public static TypeOfDrive getDriveType() {
+    public TypeOfDrive getDriveType() {
         return driveType;
     }
 
-    public static void setDriveType(TypeOfDrive driveType) {
-        DiskDrive.driveType = driveType;
+    public void setDriveType(TypeOfDrive driveType) {
+        this.driveType = driveType;
     }
 
-    public static int getDriveAmount() {
+    public int getDriveAmount() {
         return driveAmount;
     }
 
-    public static void setDriveAmount(int driveAmount) {
-        DiskDrive.driveAmount = driveAmount;
+    public void setDriveAmount(int driveAmount) {
+        this.driveAmount = driveAmount;
     }
 
-    public static int getDriveWeight() {
+    public int getDriveWeight() {
         return driveWeight;
     }
 
-    public static void setDriveWeight(int driveWeight) {
-        DiskDrive.driveWeight = driveWeight;
+    public void setDriveWeight(int driveWeight) {
+        this.driveWeight = driveWeight;
     }
 }

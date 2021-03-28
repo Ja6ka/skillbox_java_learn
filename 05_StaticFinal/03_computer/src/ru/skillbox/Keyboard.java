@@ -5,31 +5,31 @@ import ru.skillbox.computerEnum.keyboard.TypeOfKeyboard;
 
 public class Keyboard {
 
-    private static TypeOfKeyboard keyboardType;
-    private static Light keyboardLight;
-    private static int keyboardWeight;
+    private  TypeOfKeyboard keyboardType;
+    private  Light keyboardLight;
+    private  int keyboardWeight;
 
-    public static TypeOfKeyboard getKeyboardType() {
+    public TypeOfKeyboard getKeyboardType() {
         return keyboardType;
     }
 
-    public static void setKeyboardType(TypeOfKeyboard keyboardType) {
-        Keyboard.keyboardType = keyboardType;
+    public void setKeyboardType(TypeOfKeyboard keyboardType) {
+        this.keyboardType = keyboardType;
     }
 
-    public static Light getKeyboardLight() {
+    public Light getKeyboardLight() {
         return keyboardLight;
     }
 
-    public static void setKeyboardLight(Light keyboardLight) {
-        Keyboard.keyboardLight = keyboardLight;
+    public void setKeyboardLight(Light keyboardLight) {
+        this.keyboardLight = keyboardLight;
     }
 
-    public static int getKeyboardWeight() {
+    public int getKeyboardWeight() {
         return keyboardWeight;
     }
 
-    public static void setKeyboardWeight(int keyboardWeight) {
-        Keyboard.keyboardWeight = keyboardWeight;
+    public void setKeyboardWeight(int keyboardWeight) {
+        this.keyboardWeight = keyboardWeight;
     }
 }

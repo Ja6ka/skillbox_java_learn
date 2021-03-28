@@ -4,31 +4,31 @@ import ru.skillbox.computerEnum.memory.TypeOfRAM;
 
 public class Memory {
 
-    private static TypeOfRAM memoryType;
-    private static int memoryAmount; //В гигабайтах
-    private static int memoryWeight;
+    private  TypeOfRAM memoryType;
+    private  int memoryAmount; //В гигабайтах
+    private  int memoryWeight;
 
-    public static TypeOfRAM getMemoryType() {
+    public TypeOfRAM getMemoryType() {
         return memoryType;
     }
 
-    public static void setMemoryType(TypeOfRAM memoryType) {
-        Memory.memoryType = memoryType;
+    public void setMemoryType(TypeOfRAM memoryType) {
+        this.memoryType = memoryType;
     }
 
-    public static int getMemoryAmount() {
+    public int getMemoryAmount() {
         return memoryAmount;
     }
 
-    public static void setMemoryAmount(int memoryAmount) {
-        Memory.memoryAmount = memoryAmount;
+    public void setMemoryAmount(int memoryAmount) {
+        this.memoryAmount = memoryAmount;
     }
 
-    public static int getMemoryWeight() {
+    public int getMemoryWeight() {
         return memoryWeight;
     }
 
-    public static void setMemoryWeight(int memoryWeight) {
-        Memory.memoryWeight = memoryWeight;
+    public void setMemoryWeight(int memoryWeight) {
+        this.memoryWeight = memoryWeight;
     }
 }

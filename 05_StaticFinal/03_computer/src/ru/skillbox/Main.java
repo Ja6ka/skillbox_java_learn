@@ -25,5 +25,12 @@ public class Main {
         ultrabook.addDisplay(17, TypeOfDisplay.VA, 1700);
         ultrabook.addKeyboard(TypeOfKeyboard.MEMBRANE, Light.SINGLE_COLOR, 600);
         ultrabook.print();
+        Computer stationaryPC = new Computer("DNS", "GamingTRSH");
+        stationaryPC.addProcessor(2100, 4, Vendor.INTEL, 200);
+        stationaryPC.addMemory(TypeOfRAM.DDR3, 4, 120);
+        stationaryPC.addDrive(TypeOfDrive.HDD, 512, 700);
+        stationaryPC.addDisplay(21, TypeOfDisplay.TN, 3000);
+        stationaryPC.addKeyboard(TypeOfKeyboard.MEMBRANE, Light.NO, 1560);
+        stationaryPC.print();
     }
 }

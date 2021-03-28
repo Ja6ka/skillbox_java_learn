@@ -4,31 +4,31 @@ import ru.skillbox.computerEnum.display.TypeOfDisplay;
 
 public class Display {
 
-    private static int displayDiagonal;
-    private static TypeOfDisplay displayType;
-    private static int displayWeight;
+    private  int displayDiagonal;
+    private  TypeOfDisplay displayType;
+    private  int displayWeight;
 
-    public static int getDisplayDiagonal() {
+    public int getDisplayDiagonal() {
         return displayDiagonal;
     }
 
-    public static void setDisplayDiagonal(int displayDiagonal) {
-        Display.displayDiagonal = displayDiagonal;
+    public void setDisplayDiagonal(int displayDiagonal) {
+        this.displayDiagonal = displayDiagonal;
     }
 
-    public static TypeOfDisplay getDisplayType() {
+    public TypeOfDisplay getDisplayType() {
         return displayType;
     }
 
-    public static void setDisplayType(TypeOfDisplay displayType) {
-        Display.displayType = displayType;
+    public void setDisplayType(TypeOfDisplay displayType) {
+        this.displayType = displayType;
     }
 
-    public static int getDisplayWeight() {
+    public int getDisplayWeight() {
         return displayWeight;
     }
 
-    public static void setDisplayWeight(int displayWeight) {
-        Display.displayWeight = displayWeight;
+    public void setDisplayWeight(int displayWeight) {
+        this.displayWeight = displayWeight;
     }
 }

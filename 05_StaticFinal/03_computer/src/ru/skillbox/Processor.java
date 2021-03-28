@@ -4,40 +4,40 @@ import ru.skillbox.computerEnum.processor.Vendor;
 
 public class Processor {
 
-    private static int processorFrequency; //В Ггц
-    private static int coreCount;
-    private static Vendor processorVendor;
-    private static int processorWeight;
+    private  int processorFrequency; //В Ггц
+    private  int coreCount;
+    private  Vendor processorVendor;
+    private  int processorWeight;
 
-    public static int getProcessorFrequency() {
+    public int getProcessorFrequency() {
         return processorFrequency;
     }
 
-    public static void setProcessorFrequency(int processorFrequency) {
-        Processor.processorFrequency = processorFrequency;
+    public void setProcessorFrequency(int processorFrequency) {
+        this.processorFrequency = processorFrequency;
     }
 
-    public static int getCoreCount() {
+    public int getCoreCount() {
         return coreCount;
     }
 
-    public static void setCoreCount(int coreCount) {
-        Processor.coreCount = coreCount;
+    public void setCoreCount(int coreCount) {
+        this.coreCount = coreCount;
     }
 
-    public static Vendor getProcessorVendor() {
+    public Vendor getProcessorVendor() {
         return processorVendor;
     }
 
-    public static void setProcessorVendor(Vendor processorVendor) {
-        Processor.processorVendor = processorVendor;
+    public void setProcessorVendor(Vendor processorVendor) {
+        this.processorVendor = processorVendor;
     }
 
-    public static int getProcessorWeight() {
+    public int getProcessorWeight() {
         return processorWeight;
     }
 
-    public static void setProcessorWeight(int processorWeight) {
-        Processor.processorWeight = processorWeight;
+    public void setProcessorWeight(int processorWeight) {
+        this.processorWeight = processorWeight;
     }
 }
