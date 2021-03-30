@@ -8,6 +8,13 @@ public class DiskDrive {
     private  int driveAmount; //В гигабайтах
     private  int driveWeight;
 
+    public DiskDrive(){}
+    public DiskDrive (TypeOfDrive driveType, int driveAmount, int driveWeight){
+        this.driveType = driveType;
+        this.driveAmount = driveAmount;
+        this.driveWeight = driveWeight;
+    }
+
     public TypeOfDrive getDriveType() {
         return driveType;
     }

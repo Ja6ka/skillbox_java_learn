@@ -4,10 +4,20 @@ import ru.skillbox.computerEnum.processor.Vendor;
 
 public class Processor {
 
-    private  int processorFrequency; //В Ггц
-    private  int coreCount;
-    private  Vendor processorVendor;
-    private  int processorWeight;
+    private int processorFrequency; //В Ггц
+    private int coreCount;
+    private Vendor processorVendor;
+    private int processorWeight;
+
+    public Processor(int processorFrequency, int coreCount, Vendor processorVendor, int processorWeight) {
+        this.processorFrequency = processorFrequency;
+        this.coreCount = coreCount;
+        this.processorVendor = processorVendor;
+        this.processorWeight = processorWeight;
+    }
+
+    public Processor() {
+    }
 
     public int getProcessorFrequency() {
         return processorFrequency;

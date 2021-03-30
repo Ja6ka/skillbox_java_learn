@@ -9,6 +9,13 @@ public class Keyboard {
     private  Light keyboardLight;
     private  int keyboardWeight;
 
+    public Keyboard(){}
+    public Keyboard (TypeOfKeyboard keyboardType, Light keyboardLight, int keyboardWeight){
+        this.keyboardType = keyboardType;
+        this.keyboardLight = keyboardLight;
+        this.keyboardWeight = keyboardWeight;
+    }
+
     public TypeOfKeyboard getKeyboardType() {
         return keyboardType;
     }

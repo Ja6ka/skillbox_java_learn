@@ -1,12 +1,5 @@
 package ru.skillbox;
 
-import ru.skillbox.computerEnum.display.TypeOfDisplay;
-import ru.skillbox.computerEnum.drive.TypeOfDrive;
-import ru.skillbox.computerEnum.keyboard.Light;
-import ru.skillbox.computerEnum.keyboard.TypeOfKeyboard;
-import ru.skillbox.computerEnum.memory.TypeOfRAM;
-import ru.skillbox.computerEnum.processor.Vendor;
-
 public class Computer {
 
     Processor processor = new Processor();
@@ -24,40 +17,29 @@ public class Computer {
         NAME = name;
     }
 
-    public void addProcessor(int processorFrequency, int coreCount, Vendor processorVendor, int processorWeight) {
-        processor.setProcessorFrequency(processorFrequency);
-        processor.setCoreCount(coreCount);
-        processor.setProcessorVendor(processorVendor);
-        processor.setProcessorWeight(processorWeight);
+    public void addProcessor(Processor processor) {
+        this.processor = processor;
         totalWeight = totalWeight + processor.getProcessorWeight();
     }
 
-    public void addMemory(TypeOfRAM memoryType, int memoryAmount, int memoryWeight) {
-        memory.setMemoryType(memoryType);
-        memory.setMemoryAmount(memoryAmount);
-        memory.setMemoryWeight(memoryWeight);
-        totalWeight = totalWeight + memoryWeight;
+    public void addMemory(Memory memory) {
+        this.memory = memory;
+        totalWeight = totalWeight + memory.getMemoryWeight();
     }
 
-    public void addDrive(TypeOfDrive driveType, int driveAmount, int driveWeight) {
-        diskDrive.setDriveType(driveType);
-        diskDrive.setDriveAmount(driveAmount);
-        diskDrive.setDriveWeight(driveWeight);
-        totalWeight = totalWeight + driveWeight;
+    public void addDrive(DiskDrive diskDrive) {
+        this.diskDrive = diskDrive;
+        totalWeight = totalWeight + diskDrive.getDriveWeight();
     }
 
-    public void addDisplay(int displayDiagonal, TypeOfDisplay displayType, int displayWeight) {
-        display.setDisplayDiagonal(displayDiagonal);
-        display.setDisplayType(displayType);
-        display.setDisplayWeight(displayWeight);
-        totalWeight = totalWeight + displayWeight;
+    public void addDisplay(Display display) {
+        this.display = display;
+        totalWeight = totalWeight + display.getDisplayWeight();
     }
 
-    public void addKeyboard(TypeOfKeyboard keyboardType, Light keyboardLight, int keyboardWeight) {
-        keyboard.setKeyboardType(keyboardType);
-        keyboard.setKeyboardLight(keyboardLight);
-        keyboard.setKeyboardWeight(keyboardWeight);
-        totalWeight = totalWeight + keyboardWeight;
+    public void addKeyboard(Keyboard keyboard) {
+        this.keyboard = keyboard;
+        totalWeight = totalWeight + keyboard.getKeyboardWeight();
     }
 
     public void print() {

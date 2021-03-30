@@ -8,6 +8,13 @@ public class Display {
     private  TypeOfDisplay displayType;
     private  int displayWeight;
 
+    public Display(){}
+    public Display (int displayDiagonal, TypeOfDisplay displayType, int displayWeight){
+        this.displayDiagonal = displayDiagonal;
+        this.displayType = displayType;
+        this.displayWeight = displayWeight;
+    }
+
     public int getDisplayDiagonal() {
         return displayDiagonal;
     }

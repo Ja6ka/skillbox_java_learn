@@ -8,6 +8,13 @@ public class Memory {
     private  int memoryAmount; //В гигабайтах
     private  int memoryWeight;
 
+    public  Memory (TypeOfRAM memoryType, int memoryAmount, int memoryWeight) {
+        this.memoryType = memoryType;
+        this.memoryAmount = memoryAmount;
+        this.memoryWeight = memoryWeight;
+    }
+    public Memory(){}
+
     public TypeOfRAM getMemoryType() {
         return memoryType;
     }
