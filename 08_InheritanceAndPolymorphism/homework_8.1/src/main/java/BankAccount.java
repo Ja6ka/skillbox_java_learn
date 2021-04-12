@@ -37,7 +37,7 @@ public class BankAccount {
     }
 
     public boolean validToTake(double amount) {
-        return amount > 0 && amount < getAmount();
+        return amount > 0 && amount <= getAmount();
     }
 
     public double getAmount() {
