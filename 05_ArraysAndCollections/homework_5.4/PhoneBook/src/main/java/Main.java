@@ -11,8 +11,7 @@ public class Main {
             String input = scanner.nextLine();
             if (input.trim().equals("LIST")) {
                 book.getAllContacts();
-            }
-            if (input.trim().matches("7[0-9]{10}")) {
+            } else if (input.trim().matches("7[0-9]{10}")) {
                 book.getNameByPhone(input.trim());
             } else {
                 book.getPhonesByName(input.trim());
