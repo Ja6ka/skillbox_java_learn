@@ -2,6 +2,13 @@ public class BankAccount {
 
     private double amountOfMoney = 0;
 
+    public BankAccount() {
+    }
+
+    public BankAccount(double amountToPut) {
+        put(amountToPut);
+    }
+
     public void put(double amountToPut) {
         if (amountToPut > 0) {
             amountOfMoney += amountToPut;

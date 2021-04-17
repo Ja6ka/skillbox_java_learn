@@ -4,6 +4,7 @@ public class DepositAccount extends BankAccount {
 
     private LocalDate lastIncome;
 
+    @Override
     public boolean take(double amountToTake) {
         boolean hasTaken = false;
         if (!monthHasPassed()) {
@@ -15,19 +16,19 @@ public class DepositAccount extends BankAccount {
         return hasTaken;
     }
 
+    @Override
     public void put(double amountToPut) {
         super.put(amountToPut);
         setLastIncome(LocalDate.now());
-
     }
 
+    @Override
     public boolean send(BankAccount receiver, double amount) {
         boolean hasSend = false;
         if (!monthHasPassed()) {
             System.out.println("Прошло менее месяца с момента пополнения! Перевод не выполнен");
         } else {
-            super.send(receiver, amount);
-            hasSend = true;
+            hasSend = super.send(receiver, amount);
         }
         return hasSend;
     }

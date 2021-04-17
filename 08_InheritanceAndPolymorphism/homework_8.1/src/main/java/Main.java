@@ -16,5 +16,14 @@ public class Main {
         depositAccount.send(bankAccount, 500);
         cardAccount.take(500); //И самое интересное: проверим карточный счёт с комиссией
         cardAccount.send(bankAccount, 250);
+
+        BankAccount cardTestAccount = new CardAccount();
+        BankAccount depositTestAccount = new DepositAccount();
+        cardTestAccount.put(1000);
+        depositTestAccount.put(1000);
+        cardTestAccount.send(depositTestAccount, 100);
+        cardTestAccount.take(500);
+        depositTestAccount.take(100);
+
     }
 }
