@@ -1,18 +1,24 @@
-import java.util.Set;
-import java.util.TreeMap;
-import java.util.TreeSet;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.Scanner;
 
 public class PhoneBook {
 
     TreeMap<String, String> phoneNumbers = new TreeMap<>();
+    Set<String> nameSet = phoneNumbers.keySet();
 
     public void addContact(String phone, String name) {
         Matcher phoneChecker = Pattern.compile("\\d+").matcher(phone);
         if (!phone.isEmpty() && !name.isEmpty()) {
             if (phoneNumbers.containsValue(phone)) {
+                String nameToDelete = "";
+                for (Map.Entry<String, String> entry : phoneNumbers.entrySet()) {
+                    String entryKey = entry.getKey();
+                    if (phoneNumbers.get(entryKey).equals(phone)) {
+                        nameToDelete = entryKey;
+                    }
+                }
+                phoneNumbers.remove(nameToDelete, phone);
                 phoneNumbers.put(name, phone);
                 System.out.println("Номер уже есть в списке, имя перезаписано!");
             } else if (phoneChecker.find() && !name.matches("\\d+")) {
@@ -48,6 +54,7 @@ public class PhoneBook {
     public Set<String> getPhonesByName(String name) {
         Scanner scanner = new Scanner(System.in);
         Set<String> allNames = phoneNumbers.keySet();
+        Set<String> nameAndPhone = new TreeSet<>();
         String contact = "";
         boolean hasName = false;
         for (String nameInBook : allNames) {
@@ -55,10 +62,11 @@ public class PhoneBook {
                 contact = name + " - " + phoneNumbers.get(name);
                 hasName = true;
                 System.out.println(contact);
+                nameAndPhone.add(contact);
             }
         }
         if (hasName) {
-            return allNames;
+            return nameAndPhone;
         } else {
             System.out.println("Такого имени в телефонной книге нет" + System.lineSeparator() +
                     "Введите номер для контакта " + "\"" + name + "\"");
@@ -69,11 +77,15 @@ public class PhoneBook {
     }
 
     public Set<String> getAllContacts() {
+        Set<String> nameAndPhone = new TreeSet<>();
+        String contact = "";
         if (!phoneNumbers.isEmpty()) {
-            for (String contact : phoneNumbers.keySet()) {
-                System.out.println(contact + " - " + phoneNumbers.get(contact));
+            for (String name : phoneNumbers.keySet()) {
+                contact = name + " - " + phoneNumbers.get(name);
+                nameAndPhone.add(contact);
+                System.out.println(contact);
             }
-            return phoneNumbers.keySet();
+            return nameAndPhone;
         } else {
             return new TreeSet<>();
         }
