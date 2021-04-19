@@ -24,6 +24,5 @@ public class Main {
         cardTestAccount.send(depositTestAccount, 100);
         cardTestAccount.take(500);
         depositTestAccount.take(100);
-
     }
 }

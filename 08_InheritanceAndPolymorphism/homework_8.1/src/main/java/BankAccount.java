@@ -50,8 +50,4 @@ public class BankAccount {
     public double getAmount() {
         return amountOfMoney;
     }
-
-    public void setAmount(double amountOfMoney) {
-        this.amountOfMoney = amountOfMoney;
-    }
 }

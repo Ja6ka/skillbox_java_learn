@@ -12,13 +12,6 @@ public class CardAccount extends BankAccount {
 
     @Override
     public boolean send(BankAccount receiver, double amount) {
-        boolean hasSend = take(amount * (FEE_PERCENT + 1));
-        if (hasSend) {
-            receiver.put(amount);
-            System.out.println("Перевод выполнен!");
-        } else {
-            System.out.println("Перевод не выполнен!");
-        }
-        return hasSend;
+        return super.send(receiver, amount * (FEE_PERCENT + 1));
     }
 }
