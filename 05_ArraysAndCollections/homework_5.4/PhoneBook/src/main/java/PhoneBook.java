@@ -9,7 +9,6 @@ import java.util.regex.Pattern;
 public class PhoneBook {
 
     TreeMap<String, String> phoneNumbers = new TreeMap<>();
-    Set<String> nameSet = phoneNumbers.keySet();
 
     public void addContact(String phone, String name) {
         Matcher phoneChecker = Pattern.compile("\\d+").matcher(phone);
@@ -59,7 +58,7 @@ public class PhoneBook {
         Scanner scanner = new Scanner(System.in);
         Set<String> allNames = phoneNumbers.keySet();
         Set<String> nameAndPhone = new TreeSet<>();
-        String contact = "";
+        String contact;
         boolean hasName = false;
         for (String nameInBook : allNames) {
             if (nameInBook.equals(name)) {
@@ -69,15 +68,13 @@ public class PhoneBook {
                 nameAndPhone.add(contact);
             }
         }
-        if (hasName) {
-            return nameAndPhone;
-        } else {
+        if (!hasName) {
             System.out.println("Такого имени в телефонной книге нет" + System.lineSeparator() +
                     "Введите номер для контакта " + "\"" + name + "\"");
             phoneNumbers.put(name, scanner.nextLine());
             System.out.println("Контакт сохранен!");
-            return new TreeSet<>();
         }
+        return nameAndPhone;
     }
 
     public Set<String> getAllContacts() {
