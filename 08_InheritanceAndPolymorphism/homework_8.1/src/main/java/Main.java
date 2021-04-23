@@ -1,28 +1,14 @@
-import java.time.LocalDate;
-
 public class Main {
     public static void main(String[] args) {
-        //Небольшой тест. Создадим аккаунты и пополним их
         CardAccount cardAccount = new CardAccount();
         BankAccount bankAccount = new BankAccount();
-        DepositAccount depositAccount = new DepositAccount();
+
         cardAccount.put(1000.0);
         bankAccount.put(1000.0);
-        depositAccount.put(1000.0);
-        depositAccount.setLastIncome(LocalDate.now().minusMonths(2)); //Задаю дату последнего пополнения на два месяца ранее
-        depositAccount.send(bankAccount, 300);
-        depositAccount.take(500);
-        depositAccount.setLastIncome(LocalDate.now()); //А теперь проверим с текущей датой
-        depositAccount.send(bankAccount, 500);
-        cardAccount.take(500); //И самое интересное: проверим карточный счёт с комиссией
-        cardAccount.send(bankAccount, 250);
 
-        BankAccount cardTestAccount = new CardAccount();
-        BankAccount depositTestAccount = new DepositAccount();
-        cardTestAccount.put(1000);
-        depositTestAccount.put(1000);
-        cardTestAccount.send(depositTestAccount, 100);
-        cardTestAccount.take(500);
-        depositTestAccount.take(100);
+        cardAccount.send(bankAccount, 500);
+
+        System.out.println(cardAccount.getAmount());
+        System.out.println(bankAccount.getAmount());
     }
 }
