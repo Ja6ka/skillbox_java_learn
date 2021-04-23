@@ -1,10 +1,15 @@
 public class IndividualBusinessman extends Client {
 
+    private double SMALL_FEE = 0.005;
+    private double BIG_FEE = 0.01;
+
     @Override
     public void put(double amountToPut) {
-        double fee = 0.005;
+        double fee;
         if (amountToPut < 1000) {
-            fee = 0.01;
+            fee = BIG_FEE;
+        } else {
+            fee = SMALL_FEE;
         }
         super.put(amountToPut - (amountToPut * fee));
     }
