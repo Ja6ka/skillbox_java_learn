@@ -22,17 +22,6 @@ public class DepositAccount extends BankAccount {
         setLastIncome(LocalDate.now());
     }
 
-    @Override
-    public boolean send(BankAccount receiver, double amount) {
-        boolean hasSend = false;
-        if (monthHasPassed()) {
-            hasSend = super.send(receiver, amount);
-        } else {
-            System.out.println("Прошло менее месяца с момента пополнения! Перевод не выполнен");
-        }
-        return hasSend;
-    }
-
     private boolean monthHasPassed() {
         return lastIncome.isBefore(LocalDate.now().minusMonths(1));
     }

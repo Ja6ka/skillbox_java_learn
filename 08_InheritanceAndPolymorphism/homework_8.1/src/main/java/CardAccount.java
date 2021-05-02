@@ -1,6 +1,6 @@
 public class CardAccount extends BankAccount {
 
-    private final double FEE_PERCENT = 0.01;
+    private final static double FEE_PERCENT = 0.01;
 
     @Override
     public boolean take(double amountToTake) {
