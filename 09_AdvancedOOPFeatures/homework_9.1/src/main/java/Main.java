@@ -1,3 +1,4 @@
+import java.util.Comparator;
 import java.util.List;
 
 public class Main {
@@ -11,13 +12,6 @@ public class Main {
     }
 
     public static void sortBySalaryAndAlphabet(List<Employee> staff) {
-        staff.sort(((o1, o2) -> {
-            int i;
-            i = o1.getSalary().compareTo(o2.getSalary());
-            if (o1.getSalary().equals(o2.getSalary())) {
-                i = o1.getName().compareTo(o2.getName());
-            }
-            return i;
-        }));
+        staff.sort(Comparator.comparing(Employee::getSalary).thenComparing(Employee::getName));
     }
 }
