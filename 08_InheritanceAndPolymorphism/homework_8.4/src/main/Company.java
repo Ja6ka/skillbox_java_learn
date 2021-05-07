@@ -5,18 +5,16 @@ public class Company {
 
     List<Employee> staff = new ArrayList<>();
 
-    public void hire(StaffTypes typeOfEmployee) {
-        if (typeOfEmployee.equals(StaffTypes.OPERATOR)) {
-            staff.add(new Operator());
-        } else if (typeOfEmployee.equals(StaffTypes.MANAGER)) {
-            staff.add(new Manager());
-        } else if (typeOfEmployee.equals(StaffTypes.TOP_MANAGER)) {
-            staff.add(new TopManager());
-        }
+    public void hire(Employee employee) {
+        staff.add(employee);
     }
 
-    public void fire(StaffTypes typeOfEmployee) {
+    public void hireFromList(List<Employee> employeeList) {
+        staff.addAll(employeeList);
+    }
 
+    public void fire(Employee employee) {
+        staff.remove(employee);
     }
 
     public void printStaff() {
