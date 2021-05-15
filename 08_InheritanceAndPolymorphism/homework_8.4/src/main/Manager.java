@@ -1,25 +1,31 @@
 public class Manager implements Employee {
 
     private final static int MANAGER_SALARY = 50000;
-    private final static StaffTypes staffType = StaffTypes.MANAGER;
+    private static final int RANDOM_PART = 25000;
+    private static final int FIX_PART = 115000;
+    private static final double EARNED_MONEY_PERCENT = 0.05;
 
     @Override
     public int getMonthSalary() {
-        return MANAGER_SALARY + (int) (getManagerIncome() * 0.05);
+        return MANAGER_SALARY + (int) (getManagerIncome() * EARNED_MONEY_PERCENT);
     }
 
-
     @Override
-    public StaffTypes getStaffType() {
-        return staffType;
+    public int compareTo() {
+        return 0;
     }
 
     public int getManagerIncome() {
-        return (int) (Math.random() * 25000 + 115000);
+        return (int) (Math.random() * RANDOM_PART + FIX_PART);
     }
 
     @Override
     public String toString() {
-        return StaffTypes.MANAGER + " - " + getMonthSalary();
+        return "Менеджер - " + getMonthSalary();
+    }
+
+    @Override
+    public int compareTo(Employee o) {
+        return Double.compare(getMonthSalary(), o.getMonthSalary());
     }
 }
