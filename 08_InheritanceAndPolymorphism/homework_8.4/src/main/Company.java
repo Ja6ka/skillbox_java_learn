@@ -28,9 +28,10 @@ public class Company {
     }
 
     public ArrayList<Employee> getLowestSalaryStaff(int count) {
+        int size = staff.size();
         ArrayList<Employee> temp = new ArrayList<>();
         staff.sort(Comparator.comparing(Employee::getMonthSalary));
-        if (count <= staff.size()) {
+        if (count <= size) {
             for (int i = 0; i < count; i++) {
                 temp.add(staff.get(i));
             }
@@ -39,10 +40,11 @@ public class Company {
     }
 
     public ArrayList<Employee> getTopSalaryStaff(int count) {
+        int size = staff.size();
         ArrayList<Employee> temp = new ArrayList<>();
         staff.sort(Comparator.comparing(Employee::getMonthSalary));
-        if (count <= staff.size()) {
-            for (int i = staff.size() - 1; i >= staff.size() - count; i--) {
+        if (count <= size) {
+            for (int i = size - 1; i >= size - count; i--) {
                 temp.add(staff.get(i));
             }
         }
