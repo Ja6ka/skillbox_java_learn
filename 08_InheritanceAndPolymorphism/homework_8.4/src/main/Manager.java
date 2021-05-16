@@ -15,6 +15,11 @@ public class Manager implements Employee {
         return 0;
     }
 
+    @Override
+    public String getProfession() {
+        return "Manager";
+    }
+
     public int getManagerIncome() {
         return (int) (Math.random() * RANDOM_PART + FIX_PART);
     }

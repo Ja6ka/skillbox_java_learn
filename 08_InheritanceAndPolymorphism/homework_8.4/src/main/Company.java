@@ -23,16 +23,7 @@ public class Company {
     public void printStaff() {
         System.out.println("List of employees and their month salaries: ");
         for (Employee employee : staff) {
-            if (employee instanceof Operator) {
-                System.out.print("Operator");
-            } else {
-                if (employee instanceof Manager) {
-                    System.out.print("Manager");
-                } else {
-                    System.out.print("Top-Manager");
-                }
-            }
-            System.out.println(" - " + employee.getMonthSalary());
+            System.out.println(employee.getProfession() + " - " + employee.getMonthSalary());
         }
     }
 

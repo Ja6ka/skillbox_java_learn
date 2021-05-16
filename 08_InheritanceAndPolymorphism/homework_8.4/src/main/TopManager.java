@@ -18,6 +18,11 @@ public class TopManager implements Employee {
     }
 
     @Override
+    public String getProfession() {
+        return "Top-Manager";
+    }
+
+    @Override
     public String toString() {
         return "Топ-менеджер - " + getMonthSalary();
     }

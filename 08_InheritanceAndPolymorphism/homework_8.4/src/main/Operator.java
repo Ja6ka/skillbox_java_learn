@@ -13,6 +13,11 @@ public class Operator implements Employee {
     }
 
     @Override
+    public String getProfession() {
+        return "Operator";
+    }
+
+    @Override
     public String toString() {
         return "Оператор - " + getMonthSalary();
     }
