@@ -1,4 +1,7 @@
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.Comparator;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -13,8 +16,12 @@ public class Main {
     }
 
     public static Employee findEmployeeWithHighestSalary(List<Employee> staff, int year) {
-        Optional<Employee> optional = staff.stream().filter(employee -> employee.getWorkStart().getYear() == (year - 1900))
+        Optional<Employee> optional = staff.stream().filter(employee -> toLocalDate(employee.getWorkStart()).getYear() == (year - 1900))
                 .max(Comparator.comparing(Employee::getSalary));
         return optional.get();
+    }
+
+    public static LocalDate toLocalDate(Date input) {
+        return input.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
     }
 }
