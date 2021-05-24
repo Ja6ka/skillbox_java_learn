@@ -21,7 +21,8 @@ public class CustomerStorage {
 
         String[] components = data.split("\\s+");
         if (components.length != 4) {
-            throw new IllegalArgumentException("Wrong format! Correct format: add Василий Петров vasily.petrov@gmail.com +79215637722");
+            throw new IllegalArgumentException("Wrong format! Correct format: " +
+                    "add Василий Петров vasily.petrov@gmail.com +79215637722");
         }
         Pattern phonePattern = Pattern.compile("\\+7([0-9]){10}");
         Pattern emailPattern = Pattern.compile("\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*\\.\\w{2,4}");
