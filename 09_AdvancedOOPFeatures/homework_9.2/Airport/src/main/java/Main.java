@@ -1,7 +1,11 @@
 import com.skillbox.airport.Airport;
 import com.skillbox.airport.Flight;
 
-import java.util.*;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 public class Main {
 
@@ -13,15 +17,23 @@ public class Main {
 
     public static List<Flight> findPlanesLeavingInTheNextTwoHours(Airport airport) {
 
+        LocalDateTime currentTime = LocalDateTime.now();
+        LocalDateTime plusTwoHoursTime = LocalDateTime.now().plusHours(2);
         List<Flight> nextTwoHourDepartures = new ArrayList<>();
-        Date currentDate = new Date();
-        Date plusTwoHoursDate = new Date();
-        plusTwoHoursDate.setHours(currentDate.getHours() + 2);
 
-        airport.getTerminals().forEach(terminal -> terminal.getFlights().stream()
-                .filter(t -> t.getType().equals(Flight.Type.DEPARTURE))
-                .filter(t -> t.getDate().after(currentDate) && t.getDate().before(plusTwoHoursDate))
-                .forEach(nextTwoHourDepartures::add));
+        airport.getTerminals().stream().flatMap(t -> t.getFlights()
+                .stream()).filter(
+                f -> f.getType() == Flight.Type.DEPARTURE &&
+                        toLocalDateTime(f.getDate()).isBefore(plusTwoHoursTime) &&
+                        toLocalDateTime(f.getDate()).isAfter(currentTime)
+                                 )
+                .forEach(nextTwoHourDepartures::add);
         return nextTwoHourDepartures;
+    }
+
+    public static LocalDateTime toLocalDateTime(Date date) {
+        return date.toInstant()
+                .atZone(ZoneId.systemDefault())
+                .toLocalDateTime();
     }
 }

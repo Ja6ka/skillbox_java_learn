@@ -16,12 +16,13 @@ public class Main {
     }
 
     public static Employee findEmployeeWithHighestSalary(List<Employee> staff, int year) {
-        Optional<Employee> optional = staff.stream().filter(employee -> toLocalDate(employee.getWorkStart()).getYear() == (year))
+        Optional<Employee> optional = staff.stream()
+                .filter(employee -> toLocalDate(employee.getWorkStart()).getYear() == year)
                 .max(Comparator.comparing(Employee::getSalary));
         return optional.get();
     }
 
-    public static LocalDate toLocalDate(Date input) {
-        return input.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+    public static LocalDate toLocalDate(Date date) {
+        return date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
     }
 }
