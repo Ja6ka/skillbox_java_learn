@@ -33,11 +33,9 @@ public class Main {
                 } else {
                     System.out.println(COMMAND_ERROR);
                 }
-            } catch (IllegalArgumentException ex) {
+            } catch (IllegalArgumentException  | ArrayIndexOutOfBoundsException ex) {
                 System.out.println(ex.getMessage());
-            } catch (ArrayIndexOutOfBoundsException ex) {
-                System.out.println(ADD_ERROR);
+            }
             }
         }
     }
-}

@@ -21,7 +21,7 @@ public class CustomerStorage {
 
         String[] components = data.split("\\s+");
         if (components.length != 4) {
-            throw new IllegalArgumentException("Wrong format! Correct format: " +
+            throw new WrongFormatException("Wrong format! Correct format: " +
                     "add Василий Петров vasily.petrov@gmail.com +79215637722");
         }
         Pattern phonePattern = Pattern.compile("\\+7([0-9]){10}");
@@ -33,7 +33,7 @@ public class CustomerStorage {
             String name = components[INDEX_NAME] + " " + components[INDEX_SURNAME];
             storage.put(name, new Customer(name, components[INDEX_PHONE], components[INDEX_EMAIL]));
         } else {
-            throw new IllegalArgumentException("Wrong phone or email format!" +
+            throw new WrongFormatException("Wrong phone or email format!" +
                     System.lineSeparator() + "Correct phone format: \"+7\" then 10 digits" +
                     System.lineSeparator() + "Correct email format: yourmail@domain.name");
         }
