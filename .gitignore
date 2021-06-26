@@ -29,6 +29,25 @@
 05_ArraysAndCollections/homework_5.1/ReverseArray/ReverseArray.iml
 05_ArraysAndCollections/homework_5.1/TwoDimensionalArray/TwoDimensionalArray.iml
 05_ArraysAndCollections/homework_5.2/TodoList/TodoList.iml
+05_ArraysAndCollections/homework_5.3/EmailList/EmailList.iml
+05_ArraysAndCollections/homework_5.4/PhoneBook/PhoneBook.iml
+08_InheritanceAndPolymorphism/homework_8.1/Inheritance1.iml
+08_InheritanceAndPolymorphism/homework_8.3/Inheritance3.iml
+09_AdvancedOOPFeatures/homework_9.1/LambdaExpressions.iml
+09_AdvancedOOPFeatures/homework_9.2/Airport/LambdaExpressions-Airport.iml
+09_AdvancedOOPFeatures/homework_9.2/Employees/LambdaExpressions-Employee.iml
+10_ExceptionsDebuggingAndTesting/homework_10.1/ConsoleCustomerList/ConsoleCustomerList.iml
+10_ExceptionsDebuggingAndTesting/homework_10.1/ConsoleCustomerList/src/main/java/WrongFormatException.java
+streams-assignments/.gitignore
+streams-assignments/LambdaExercise.iml
+streams-assignments/README.md
+streams-assignments/pom.xml
+streams-assignments/src/main/java/Main.java
+streams-assignments/src/main/java/tasks/PleaseDeleteMeAndImplement.java
+streams-assignments/src/test/
+
+
+
 
 
 
