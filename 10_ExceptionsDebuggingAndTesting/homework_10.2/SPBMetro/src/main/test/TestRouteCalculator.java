@@ -13,6 +13,7 @@ import java.util.List;
 @DisplayName("Проверка всех методов класса RouteCalculator")
 public class TestRouteCalculator extends TestCase {
 
+    private  static StationIndex stationIndex;
     List<Station> testRoute;
     StationIndex index = new StationIndex();
     Line line1 = new Line(1, "LineOne");
@@ -42,6 +43,8 @@ public class TestRouteCalculator extends TestCase {
         testRoute.add(new Station("StationThree", line2));
         testRoute.add(new Station("StationFour", line2));
         testRoute.add(new Station("StationFive", line3));
+
+        stationIndex.addConnection(testRoute);
     }
 
     @Test
@@ -49,7 +52,7 @@ public class TestRouteCalculator extends TestCase {
     public void testCalculateDurationWithTwoTransfers() {
         double actual = RouteCalculator.calculateDuration(testRoute);
         double expected = 12.0;
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
     }
 
 
@@ -58,9 +61,8 @@ public class TestRouteCalculator extends TestCase {
     public void testCalculateDurationWithOneTransfer() {
         List <Station> oneTransferList = new ArrayList<>();
         RouteCalculator test = new RouteCalculator(index);
-        oneTransferList = test.getShortestRoute(one, four);
         double actual = RouteCalculator.calculateDuration(oneTransferList);
         double expected = 8.5;
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
     }
 }
