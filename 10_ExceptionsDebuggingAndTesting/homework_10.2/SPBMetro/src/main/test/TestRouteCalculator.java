@@ -20,7 +20,6 @@ public class TestRouteCalculator extends TestCase {
     Station five = new Station("StationFive", line3);
     Station six = new Station("StationSix", line3);
 
-
     protected void setUp() throws Exception {
         List<Station> firstConnect = Arrays.asList(two, three);
         List<Station> secondConnect = Arrays.asList(four, five);
