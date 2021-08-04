@@ -2,31 +2,29 @@ import core.Line;
 import core.Station;
 
 import junit.framework.TestCase;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 
-
-@DisplayName("Проверка всех методов класса RouteCalculator")
 public class TestRouteCalculator extends TestCase {
 
-    private  static StationIndex stationIndex;
-    List<Station> testRoute;
     StationIndex index = new StationIndex();
     Line line1 = new Line(1, "LineOne");
     Line line2 = new Line(2, "LineTwo");
     Line line3 = new Line(3, "LineThree");
-    Station one = new Station ("StationOne", line1);
-    Station two = new Station ("StationTwo", line1);
-    Station three = new Station ("StationThree", line2);
-    Station four = new Station ("StationFour", line2);
-    Station five = new Station ("StationFive", line3);
+    Station one = new Station("StationOne", line1);
+    Station two = new Station("StationTwo", line1);
+    Station three = new Station("StationThree", line2);
+    Station four = new Station("StationFour", line2);
+    Station five = new Station("StationFive", line3);
+    Station six = new Station("StationSix", line3);
 
 
     protected void setUp() throws Exception {
+        List<Station> firstConnect = Arrays.asList(two, three);
+        List<Station> secondConnect = Arrays.asList(four, five);
+
         index.addLine(line1);
         index.addLine(line2);
         index.addLine(line3);
@@ -35,34 +33,28 @@ public class TestRouteCalculator extends TestCase {
         index.addStation(three);
         index.addStation(four);
         index.addStation(five);
+        index.addStation(six);
 
-        testRoute = new ArrayList<>();
+        index.addConnection(firstConnect);
+        index.addConnection(secondConnect);
 
-        testRoute.add(new Station ("StationOne", line1));
-        testRoute.add(new Station("StationTwo", line1));
-        testRoute.add(new Station("StationThree", line2));
-        testRoute.add(new Station("StationFour", line2));
-        testRoute.add(new Station("StationFive", line3));
-
-        stationIndex.addConnection(testRoute);
     }
 
-    @Test
-    @DisplayName("Тест с двумя пересадками")
-    public void testCalculateDurationWithTwoTransfers() {
-        double actual = RouteCalculator.calculateDuration(testRoute);
-        double expected = 12.0;
+
+    public void testCalculateDurationWithOneTransfer() {
+        List<Station> oneTransferList;
+        RouteCalculator calc = new RouteCalculator(index);
+        oneTransferList = calc.getShortestRoute(index.getStation("StationOne"), index.getStation("StationFour"));
+        double actual = RouteCalculator.calculateDuration(oneTransferList);
+        double expected = 8.5;
         assertEquals(expected, actual);
     }
 
-
-    @Test
-    @DisplayName("Тест с одной пересадкой")
-    public void testCalculateDurationWithOneTransfer() {
-        List <Station> oneTransferList = new ArrayList<>();
-        RouteCalculator test = new RouteCalculator(index);
-        double actual = RouteCalculator.calculateDuration(oneTransferList);
-        double expected = 8.5;
+    public void testCalculateDurationWithTwoTransfers() {
+        RouteCalculator calc = new RouteCalculator(index);
+        List<Station> twoTransferList = calc.getShortestRoute(index.getStation("StationOne"), index.getStation("StationSix"));
+        double expected = 14.5;
+        double actual = RouteCalculator.calculateDuration(twoTransferList);
         assertEquals(expected, actual);
     }
 }
