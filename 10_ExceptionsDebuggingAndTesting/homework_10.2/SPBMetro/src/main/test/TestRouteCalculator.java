@@ -33,6 +33,12 @@ public class TestRouteCalculator extends TestCase {
         index.addStation(four);
         index.addStation(five);
         index.addStation(six);
+        line1.addStation(one);
+        line1.addStation(two);
+        line2.addStation(three);
+        line2.addStation(four);
+        line3.addStation(five);
+        line3.addStation(six);
 
         index.addConnection(firstConnect);
         index.addConnection(secondConnect);
@@ -50,10 +56,38 @@ public class TestRouteCalculator extends TestCase {
     }
 
     public void testCalculateDurationWithTwoTransfers() {
+        List<Station> twoTransferList;
         RouteCalculator calc = new RouteCalculator(index);
-        List<Station> twoTransferList = calc.getShortestRoute(index.getStation("StationOne"), index.getStation("StationSix"));
-        double expected = 14.5;
+        twoTransferList = calc.getShortestRoute(index.getStation("StationOne"), index.getStation("StationFive"));
         double actual = RouteCalculator.calculateDuration(twoTransferList);
+        double expected = 12.0;
+        assertEquals(expected, actual);
+    }
+
+    public void testCalculateDurationWithNull() {
+        List<Station> twoTransferList;
+        RouteCalculator calc = new RouteCalculator(index);
+        twoTransferList = calc.getShortestRoute(index.getStation("StationOne"), index.getStation(null));
+        double actual = RouteCalculator.calculateDuration(twoTransferList);
+        double expected = 0.0;
+        assertEquals(expected, actual);
+    }
+
+    public void testCalculateDurationWithSameStations() {
+        List<Station> oneTransferList;
+        RouteCalculator calc = new RouteCalculator(index);
+        oneTransferList = calc.getShortestRoute(index.getStation("StationTwo"), index.getStation("StationTwo"));
+        double actual = RouteCalculator.calculateDuration(oneTransferList);
+        double expected = 0.0;
+        assertEquals(expected, actual);
+    }
+
+    public void testCalculateDurationWithNonExistingStation() {
+        List<Station> oneTransferList;
+        RouteCalculator calc = new RouteCalculator(index);
+        oneTransferList = calc.getShortestRoute(index.getStation("StationTwo"), index.getStation("NonExisting"));
+        double actual = RouteCalculator.calculateDuration(oneTransferList);
+        double expected = 0.0;
         assertEquals(expected, actual);
     }
 }

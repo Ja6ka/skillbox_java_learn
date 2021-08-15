@@ -1,9 +1,6 @@
 import core.Station;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class RouteCalculator {
     private final StationIndex stationIndex;
@@ -15,7 +12,12 @@ public class RouteCalculator {
         this.stationIndex = stationIndex;
     }
 
-    public List<Station> getShortestRoute(Station from, Station to) {
+    public  List<Station> getShortestRoute(Station from, Station to) {
+
+        if (from == null || to == null) {
+            return null;
+        }
+
         List<Station> route = getRouteOnTheLine(from, to);
         if (route != null) {
             return route;
@@ -31,6 +33,11 @@ public class RouteCalculator {
     }
 
     public static double calculateDuration(List<Station> route) {
+
+        if (route == null) {
+            return 0.0;
+        }
+
         double duration = 0;
         Station previousStation = null;
         for (int i = 0; i < route.size(); i++) {
@@ -45,6 +52,9 @@ public class RouteCalculator {
     }
 
     private List<Station> getRouteOnTheLine(Station from, Station to) {
+        if (from == null || to == null) {
+            return null;
+        }
         if (!from.getLine().equals(to.getLine())) {
             return null;
         }
@@ -76,6 +86,10 @@ public class RouteCalculator {
     }
 
     private List<Station> getRouteWithOneConnection(Station from, Station to) {
+        if (from == null || to == null) {
+            return null;
+        }
+
         if (from.getLine().equals(to.getLine())) {
             return null;
         }
@@ -97,8 +111,10 @@ public class RouteCalculator {
                 }
             }
         }
-        return route;
+        return route.size() > 0 ? route : null;
     }
+
+
 
     private boolean isConnected(Station station1, Station station2) {
         Set<Station> connected = stationIndex.getConnectedStations(station1);
@@ -119,6 +135,11 @@ public class RouteCalculator {
     }
 
     private List<Station> getRouteWithTwoConnections(Station from, Station to) {
+
+        if (from == null || to == null) {
+            return null;
+        }
+
         if (from.getLine().equals(to.getLine())) {
             return null;
         }
