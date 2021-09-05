@@ -2,10 +2,10 @@ import core.Line;
 import core.Station;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.core.config.Loggers;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+
 
 
 import java.nio.file.Files;
@@ -16,7 +16,6 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-
     private static final String DATA_FILE = "src/main/resources/map.json";
     private static Scanner scanner;
     private static StationIndex stationIndex;
@@ -25,12 +24,13 @@ public class Main {
     private static Logger loggerExceptions;
 
 
+
     public static void main(String[] args) {
 
         scanner = new Scanner(System.in);
-        loggerErrors = LogManager.getLogger("Input errors");
-        loggerSearches = LogManager.getLogger("Search queries");
-        loggerExceptions = LogManager.getLogger("Exceptions");
+        loggerErrors = LogManager.getLogger("input_errors");
+        loggerSearches = LogManager.getLogger("search_queries");
+        loggerExceptions = LogManager.getLogger("exceptions");
 
         RouteCalculator calculator = getRouteCalculator();
 
@@ -39,7 +39,9 @@ public class Main {
         try {
             for (; ; ) {
                 Station from = takeStation("Введите станцию отправления:");
+                loggerSearches.info("Departure station: " + from.getName());
                 Station to = takeStation("Введите станцию назначения:");
+                loggerSearches.info("Destination station: " + to.getName());
 
                 List<Station> route = calculator.getShortestRoute(from, to);
                 System.out.println("Маршрут:");
@@ -50,7 +52,7 @@ public class Main {
             }
         } catch (Exception ex) {
             ex.printStackTrace();
-            loggerExceptions.error("Error: " + Arrays.toString(ex.getStackTrace()));
+            loggerExceptions.error( "Error: " + Arrays.toString(ex.getStackTrace()));
         }
     }
 
@@ -82,12 +84,10 @@ public class Main {
             String line = input.trim();
             Station station = stationIndex.getStation(line);
             if (station != null) {
-                loggerSearches.info("Searched station: " + line);
                 return station;
             }
-
             System.out.println("Станция не найдена :(");
-            loggerErrors.warn("Query mistake: " + input);
+            loggerErrors.warn( "Query mistake: " + input);
         }
     }
 
