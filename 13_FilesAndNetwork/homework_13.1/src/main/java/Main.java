@@ -10,8 +10,6 @@ public class Main {
             System.out.println("Введите путь к папке или файлу: ");
             String input = scanner.nextLine().replace('\\', File.separatorChar);
 
-            File file = new File(input);
-            System.out.println(file.length());
             size = FileUtils.calculateFolderSize(input);
             System.out.println("Размер " + FileUtils.isFolder(input) + ": " + FileUtils.convertFormat(size));
         }

@@ -1,32 +1,36 @@
-import java.io.File;
+import java.io.IOException;
+import java.nio.file.*;
+import java.nio.file.attribute.BasicFileAttributes;
 
 public class FileUtils {
 
     public static long calculateFolderSize(String path) {
-        long totalLength = 0;
+        Path file = Paths.get(path);
+        final long[] fileSize = {0};
         try {
-            File file = new File(path);
-            if (file.isDirectory()) {
-                for (File f : file.listFiles()) {
-                    if (f.isDirectory()) {
-                        totalLength += calculateFolderSize(f.getPath());
-                    } else {
-                        totalLength += f.length();
-                    }
+            Files.walkFileTree(file, new SimpleFileVisitor<>() {
+                @Override
+                public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
+                    fileSize[0] += Files.size(file);
+                    return FileVisitResult.CONTINUE;
                 }
-            } else {
-                totalLength = file.length();
-            }
-        } catch (NullPointerException ex) {
+
+                @Override
+                public FileVisitResult visitFileFailed(Path file, IOException e) throws IOException {
+                    System.err.printf("Visiting failed, skip: %9s (???) bytes\t- %s\n", Files.size(file), file);
+                    return FileVisitResult.SKIP_SUBTREE;
+                }
+            });
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
-        return totalLength;
+        return fileSize[0];
     }
 
     public static String isFolder(String path) {
         String type;
-        File file = new File(path);
-        if (file.isDirectory()) {
+        Path file = Paths.get(path);
+        if (Files.isDirectory(file)) {
             type = "папки";
         } else {
             type = "файла";
