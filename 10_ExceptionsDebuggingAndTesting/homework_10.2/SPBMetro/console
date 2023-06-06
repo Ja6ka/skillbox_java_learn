@@ -1,0 +1,19 @@
+2021-09-05 12:51:20.741 [main] WARN  InputErrorLogger - Query mistake: 
+2021-09-05 12:51:20.745 [main] WARN  InputErrorLogger - Query mistake: а
+2021-09-05 12:51:23.015 [main] INFO  SearchQueriesLogger - Searched station: Автово
+2021-09-05 12:51:26.002 [main] WARN  InputErrorLogger - Query mistake: Аваав
+2021-09-05 12:51:29.172 [main] WARN  InputErrorLogger - Query mistake: Сеная полка
+2021-09-05 12:51:32.322 [main] INFO  SearchQueriesLogger - Searched station: Сенная площадь
+2021-09-05 13:26:09.652 [main] WARN  InputErrorLogger - Query mistake: fdf
+2021-09-05 13:26:12.184 [main] INFO  SearchQueriesLogger - Departure station: Автово
+2021-09-05 13:26:13.835 [main] WARN  InputErrorLogger - Query mistake: Аавава
+2021-09-05 13:26:15.616 [main] WARN  InputErrorLogger - Query mistake: Сука
+2021-09-05 13:26:19.940 [main] INFO  SearchQueriesLogger - Destination station: Сенная площадь
+2021-09-05 13:27:40.248 [main] WARN  loggerErrors - Query mistake: ава
+2021-09-05 13:27:40.995 [main] WARN  loggerErrors - Query mistake: вава
+2021-09-05 13:27:42.525 [main] INFO  loggerSearches - Departure station: Автово
+2021-09-05 13:27:45.133 [main] WARN  loggerErrors - Query mistake: Петровская
+2021-09-05 13:27:47.772 [main] WARN  loggerErrors - Query mistake: развап
+2021-09-05 13:27:50.808 [main] WARN  loggerErrors - Query mistake: разумовская
+2021-09-05 13:27:52.234 [main] WARN  loggerErrors - Query mistake: Сука
+2021-09-05 13:27:54.974 [main] INFO  loggerSearches - Destination station: Сенная площадь

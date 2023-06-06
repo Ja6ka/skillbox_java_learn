@@ -17,7 +17,7 @@ public class ExceptionTests {
 
     @Test
     @DisplayName("Передано более 4 слов в строке")
-    void moreThenFourElementsInputString() {
+    void TestMoreThenFourElementsInputString() {
         final String input = "Василий Петров vasily.petrov@gmail.com +79215637722 5слово";
 
         assertThrows(Throwable.class, () -> storage.addCustomer(input),

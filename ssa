@@ -1,0 +1,838 @@
+[33mcommit ce9a830864d7025b9d090eaaf48cbeed75507620[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Thu Sep 15 20:44:53 2022 +0500
+
+    added Main
+
+[33mcommit 51cf5afaa525a114b89cf8d0686dee9b8bf6f113[m
+Author: Жвакин Даниил <da.zhvakin@gmail.com>
+Date:   Thu Sep 8 10:14:28 2022 +0000
+
+    Add new directory
+
+[33mcommit 7765d1b7fc074bd6ad59a909f52db25565ec5c9d[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sun Feb 27 17:01:03 2022 +0500
+
+    added 13.4 homework
+
+[33mcommit e108d6b1385c91edbedb0b0d4f84c24bfa343979[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sat Feb 26 20:37:13 2022 +0500
+
+    added 13.3 homework
+
+[33mcommit b7091e987d6600cf34b293288f4596dc950fa28f[m
+Author: Skillbox <it@skillbox.ru>
+Date:   Fri Feb 25 13:24:43 2022 +0000
+
+    Add lesson
+
+[33mcommit b36d949a4b26a71257b42a8c4f39fcd203184f23[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Wed Sep 29 17:15:50 2021 +0500
+
+    modified FileUtils and Main
+
+[33mcommit 9c20a624ee2eeec3e5e0becb44506e7fcf33b10d[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sun Sep 26 20:03:04 2021 +0500
+
+    modified FileUtils and Main
+
+[33mcommit 66294aadaa915b303c1b39ea9f38f44413f26886[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sat Sep 18 20:29:56 2021 +0500
+
+    modified FileUtils.java to work without File class, modified Main
+
+[33mcommit f5a146e3bc37a21644340afb6a1815ee99d28e67[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Fri Sep 17 16:12:32 2021 +0500
+
+    modified FilesAndNetwork homework
+
+[33mcommit 4117b2a86dbf6a1fb016901f252127b9bf2bf3d2[m
+Author: Skillbox <it@skillbox.ru>
+Date:   Thu Sep 9 17:14:59 2021 +0000
+
+    Add lesson
+
+[33mcommit e91c3f163d4b5cff9b71371d99a4b84a05ffb487[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sun Sep 5 13:37:07 2021 +0500
+
+    modified SPBMetro
+
+[33mcommit 5c0de40802475bbda1461a7ed8413086ae4fb0cf[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sat Sep 4 16:06:23 2021 +0500
+
+    modified SPBMetro
+
+[33mcommit d82e73f5849ea7c27b952ca4f1924570f7ab15ca[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Fri Aug 27 22:45:26 2021 +0500
+
+    modified pom.xml
+
+[33mcommit 260bfc7e28bea79d2b93236359fd441a80f12dbf[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sun Aug 15 19:37:57 2021 +0500
+
+    modified Main
+
+[33mcommit b15d5578eb868ea7de9a77cd9c8951747c511d59[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sun Aug 15 17:41:51 2021 +0500
+
+    modified TestRouteCalculator and RouteCalculator
+
+[33mcommit 94b9a2bb8160418ba804a8f6524daa41c902400b[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Wed Aug 4 15:10:57 2021 +0500
+
+    modified TestRouteCalculator
+
+[33mcommit ad3546a48e1a0b3ce0bb9c680b8b351e33dd7fc4[m
+Merge: 30a341d e763624
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Wed Aug 4 15:08:18 2021 +0500
+
+    Merge branch 'master' of https://gitlab.skillbox.ru/zhvakin_daniil/java_basics
+
+[33mcommit 30a341d36f052d0c994139c70c6f309a9a9254c3[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Wed Aug 4 15:07:06 2021 +0500
+
+    modified TestRouteCalculator
+
+[33mcommit e763624802898944e87bdb99709de0d8547fa71c[m
+Author: Skillbox <it@skillbox.ru>
+Date:   Thu Jul 15 14:48:01 2021 +0000
+
+    Add lesson
+
+[33mcommit 841311da4b8e85899fdc1cf3b39aff7f94279967[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Wed Jul 7 17:34:42 2021 +0500
+
+    modified TestRouteCalculator
+
+[33mcommit 13f3c14b40761752702cf70dcb97ab598ae3ea91[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sat Jul 3 16:42:20 2021 +0500
+
+    modified TestRouteCalculator
+
+[33mcommit 5b0e572054626f3f42afc8f24935df88b070e573[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Mon Jun 28 20:47:04 2021 +0500
+
+    added TestRouteCalculator class and pom.xml
+
+[33mcommit 8dc5179843200d8d403a3b8a26caa7887e1bb3af[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Mon Jun 28 18:38:19 2021 +0500
+
+    added WrongFormatException class
+
+[33mcommit 3e48957583391cb91a000e01f7dd50bc4fa7f2a6[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sat Jun 26 17:50:13 2021 +0500
+
+    added .gitignore
+
+[33mcommit 90d7fef62899fb0a6c4ca96f50d2a9eebca645da[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sat Jun 26 17:43:43 2021 +0500
+
+    modifie ConsoleCustomerList project
+
+[33mcommit a073651ade5d6f8f657ceaaad70bca0e404062fb[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sat Jun 26 17:23:36 2021 +0500
+
+    added tasks
+
+[33mcommit 0456b6628b756a4be7c9d16eb3982fdda3be9f57[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sat Jun 26 17:22:10 2021 +0500
+
+    Removed submodule
+
+[33mcommit 0e1b7ce6804b15b00f1ee372e151e18b51fc0548[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sat Jun 26 16:47:25 2021 +0500
+
+    test commit
+
+[33mcommit 90cde5149a11772513a2cc9ce8e9a7bb3d4286f2[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Mon May 24 20:53:29 2021 +0500
+
+    Опять забыл перенос строки
+
+[33mcommit 3f805607e2ea9317a0a8153ba648cc22a099903c[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Mon May 24 20:50:38 2021 +0500
+
+    modified ConsoleCustomersList project
+
+[33mcommit 8f6d104b3695444666fc9d3689b3654933d58efc[m
+Author: Skillbox <it@skillbox.ru>
+Date:   Mon May 24 14:38:44 2021 +0000
+
+    Add lesson
+
+[33mcommit 9b597b36af2df692b0b54a89d9ec2ddf38ece91a[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Mon May 24 19:26:58 2021 +0500
+
+    modified 9.2 homework
+
+[33mcommit af6d955e1f244c582ca56690f6ad5662bc47e513[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sat May 22 17:06:35 2021 +0500
+
+    modified 9.2 Employee task
+
+[33mcommit c739ed8d5a2815ff1a9b6af6f06a33238d3aa860[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sat May 22 16:59:57 2021 +0500
+
+    modified 9.1 homework
+
+[33mcommit 4b14c044d90670c1fb4ff7b4e5327cd6fe14ea8b[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sun May 16 22:18:56 2021 +0500
+
+    modified Company class
+
+[33mcommit 5a8f942bedaab3437ea87a9372313ff9dec12e81[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sun May 16 22:04:25 2021 +0500
+
+    modified Employee interface
+
+[33mcommit adc907441f605ec355a3813635da18afb8a2a543[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sat May 15 14:30:29 2021 +0500
+
+    modified homework 8.4 classes
+
+[33mcommit d3044af3fe49df02ff433ce472ba8f1eff8ecb45[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sat May 8 18:59:48 2021 +0500
+
+    modified Airport 9.2 hometask
+
+[33mcommit ee002aca456a6d7d4d2acdffc370b8f769a9a87a[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Fri May 7 21:03:00 2021 +0500
+
+    modified 9.2
+
+[33mcommit 089a19545e17383f7b35fb5126329accc8eb717c[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Fri May 7 13:54:32 2021 +0500
+
+    modified 8.4
+
+[33mcommit b33fe578fbe7d400dc2254231d2f8723de6df241[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Thu May 6 15:26:59 2021 +0500
+
+    added homework 8.4 Employee project
+
+[33mcommit aa8cdd2066289f304f731a248b677568f01a2f2c[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Thu May 6 11:28:29 2021 +0500
+
+    modified LambdaExpressions project
+
+[33mcommit 0b1c45ec41b10cacc1e08f61a8fc5ac794bbb09a[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Tue May 4 19:52:40 2021 +0500
+
+    modified LambdaExpressions project
+
+[33mcommit 6ce8469075bfa72f60fe173f7e8b65e743a235c5[m
+Author: Skillbox <it@skillbox.ru>
+Date:   Tue May 4 14:26:23 2021 +0000
+
+    Add lesson
+
+[33mcommit 418efa3632e7cd4b33b06fb92b0c6eb6892d5b24[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sun May 2 12:56:03 2021 +0500
+
+    modified BankAccount project
+
+[33mcommit 18ef3d81079ad376f4e967ab83081bbb0982f167[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Fri Apr 23 15:35:47 2021 +0500
+
+    modified Client homework project
+
+[33mcommit e543afa6ba7386317c83ecd1667553c2f40d0987[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Fri Apr 23 15:28:09 2021 +0500
+
+    modified BankAccount project
+
+[33mcommit b1a98e42829805a648ce5225d24ac262cc0f2367[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Mon Apr 19 21:57:14 2021 +0500
+
+    added Client (homework 8.3) project
+
+[33mcommit fe8ee293b25c389b2710b5f9f10cc1c3af161a90[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Mon Apr 19 20:29:59 2021 +0500
+
+    modified BankAccount project
+
+[33mcommit 8b949fb5f1d4b28bd2102bbc731b83ee25e56976[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Mon Apr 19 20:02:27 2021 +0500
+
+    modified PhoneBook project
+
+[33mcommit e6a662bc31597eda55cc67e34cda1d343e2c9435[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sat Apr 17 21:42:39 2021 +0500
+
+    modified BankAccount project
+
+[33mcommit 6b759b1b868b65dd60c253d39ae88755accdc781[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sat Apr 17 17:09:35 2021 +0500
+
+    modified PhoneBook
+
+[33mcommit d6c9b3fe4471b3d8fd6dcd25e1ade5ed700a6791[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sat Apr 17 16:57:56 2021 +0500
+
+    modified PhoneBook
+
+[33mcommit abf3acbc690f06f4d9814f75da8c9e1b5d700af3[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Mon Apr 12 23:27:22 2021 +0500
+
+    modified BankAccount
+
+[33mcommit e726218ab94c8b88c7cc87b92b998679752367f8[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Mon Apr 12 23:17:44 2021 +0500
+
+    added BankAccount project
+
+[33mcommit 310db11e7b30ad1e73c7c65f83dfb3ae49ac802e[m
+Author: Skillbox <it@skillbox.ru>
+Date:   Mon Apr 12 16:03:01 2021 +0000
+
+    Add lesson
+
+[33mcommit d7a5577f5059f27711a233ab8cabf012bdaa3ac5[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Mon Apr 12 15:56:05 2021 +0500
+
+    modified PhoneBook
+
+[33mcommit f07085f8c7f585a523291d3ebc839d2e43252e42[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Fri Apr 9 16:49:15 2021 +0500
+
+    added PhoneBook v0.1
+
+[33mcommit dff7b9ee95e962903188a195fce9a3971a319437[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Mon Apr 5 22:05:21 2021 +0500
+
+    modified EmailList
+
+[33mcommit 183fc3c664b620dafa27e739deab935d1336cc19[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sun Apr 4 20:51:40 2021 +0500
+
+    modified CoolNumbers
+
+[33mcommit 83b339445489e2f7a2f232758862391f2fdf79e3[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sun Apr 4 19:50:53 2021 +0500
+
+    modified EmailList
+
+[33mcommit 490dd4843a8bcbfa349a3ff91055978d3ed1b5f5[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Fri Apr 2 20:25:29 2021 +0500
+
+    added CoolNumber project
+
+[33mcommit 4fdea667566cad8fce2631d71b65725a7e465183[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Tue Mar 30 13:08:37 2021 +0500
+
+    modified Computer project
+
+[33mcommit a25a967da03e947061e32ecffba2dd04c34f3e33[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sun Mar 28 14:12:52 2021 +0500
+
+    modified Computer project classes
+
+[33mcommit 97aa11735a99b307bef43fb5be6c2955c39267f8[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Fri Mar 26 19:29:52 2021 +0500
+
+    added EmailList java\
+
+[33mcommit c5604093839dcb66e2540986aa773cf0980e2369[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Fri Mar 26 14:52:02 2021 +0500
+
+    modified gitignore
+
+[33mcommit f0287f23426381b0e0d296e96f89337b35a7bc0c[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Fri Mar 26 12:21:52 2021 +0500
+
+    modified TodoList class
+
+[33mcommit 6339bc60190cf2f7570718703772d5d5d18974e4[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Fri Mar 26 01:29:48 2021 +0500
+
+    added TodoList project
+
+[33mcommit 368fd8f5a050c35ef930e848c3ee79dc9368c7df[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Thu Mar 25 15:02:59 2021 +0500
+
+    added Processor, Memory. DiskDrive, Display and Keyboard classes
+
+[33mcommit b0b8aa05154fa3232ecf8bb99cce8f7e4d5f421a[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Thu Mar 25 00:19:28 2021 +0500
+
+    modified Computer class field types
+
+[33mcommit e45fcbaef2a9c2f492d80f9104090f415ac285d0[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Tue Mar 23 22:37:53 2021 +0500
+
+    Added Computer project
+
+[33mcommit 14c29849d3df97dc28a7ce137b90c0217aed0779[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Tue Mar 23 19:24:04 2021 +0500
+
+    Enum homework done
+
+[33mcommit 92644c350a25d968e21859599835711d6368d977[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Tue Mar 23 19:07:40 2021 +0500
+
+    new hometasks done
+
+[33mcommit ecf375b92e65eb75e90e6d94727f7e8ecd39890e[m
+Author: Skillbox <it@skillbox.ru>
+Date:   Tue Mar 23 12:14:09 2021 +0000
+
+    Add lesson
+
+[33mcommit 827155b23a9be62eee961fbc66427bce811f32d8[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Wed Mar 17 15:17:34 2021 +0500
+
+    added Printer project
+
+[33mcommit 460a219b2e7eb1386cd68aa3eea13d3e6255a803[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Wed Mar 17 14:40:16 2021 +0500
+
+    added Arithmetic project
+
+[33mcommit 4d75c27bc6d92a97379236212dbacafa5253a1df[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Wed Mar 17 14:02:49 2021 +0500
+
+    added OnlineShop project
+
+[33mcommit a143317908e2b450581f8ea64801f77851fb8b51[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Mon Mar 15 22:25:54 2021 +0500
+
+    added Matrix directory Main class, modified Hospital directory
+
+[33mcommit 85b0c6a83f0e90b2129e5062e5fd1f1b83f000b3[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sun Mar 14 23:53:07 2021 +0500
+
+    Homework 5.1 classes added and modified
+
+[33mcommit 0bb87694920af54f10f4d5be533ac3e8be2720fb[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sun Mar 14 18:03:50 2021 +0500
+
+    PhoneCleaner completed
+
+[33mcommit 4b63592c69da2d0ca7ac86d7229c7191a6827854[m
+Merge: c0e3946 30472a7
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Fri Mar 12 17:39:29 2021 +0500
+
+    Merge branch 'master' of https://gitlab.skillbox.ru/zhvakin_daniil/java_basics
+
+[33mcommit c0e39462696c6f9402c0336de5118720e2009f72[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Fri Mar 12 17:38:36 2021 +0500
+
+    modified PhoneCleaner Main class
+
+[33mcommit 30472a7e6369b67215bd851ea60413da8be2d128[m
+Author: Skillbox <it@skillbox.ru>
+Date:   Fri Mar 12 11:26:14 2021 +0000
+
+    Add lesson
+
+[33mcommit 2f619ec5cbdb75024cdec1e1c04b2b631e6126bd[m
+Author: Skillbox <it@skillbox.ru>
+Date:   Fri Mar 12 11:26:11 2021 +0000
+
+    Add .gitignore
+
+[33mcommit a74345a8944ab92b0d16a504c3ea3aaecc4d3a15[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Fri Mar 12 14:46:01 2021 +0500
+
+    modified PhoneCleaner
+
+[33mcommit 7cb7278263992a1b8f489ccecff4d421c1829f5d[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Fri Mar 12 14:37:51 2021 +0500
+
+    modified phoneCleaner
+
+[33mcommit fad6bafb1beec8b64d235bd048f63ae4c9193d83[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Wed Mar 10 19:20:48 2021 +0500
+
+    modified BirthdayCalendar Main class
+
+[33mcommit f31505e00189c25e99663be535707e84954b66bc[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Wed Mar 10 19:15:02 2021 +0500
+
+    modified BirthdayCalendar Main class
+
+[33mcommit 33a3de19fd082d257388288eaa1e43cfb50847db[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Wed Mar 10 17:45:00 2021 +0500
+
+    modified BirthdayCalendar Main class
+
+[33mcommit 731267327feeabb5a17202144a5771fa6357a2f9[m
+Merge: ab01901 fa2cb90
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Wed Mar 10 17:42:19 2021 +0500
+
+    modified BirthdayCalendar
+
+[33mcommit ab01901a700c64203dca57a41a9b81a75e6281e1[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Wed Mar 10 17:40:09 2021 +0500
+
+    modified PhoneCleaner Main class
+
+[33mcommit c7f395bb60787d7ec798e712b7bdb25f105d79c4[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Tue Mar 9 22:01:59 2021 +0500
+
+    added BirthdayCalendar class
+
+[33mcommit fa2cb9094d5729469c5b22f37010d230c8745e67[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Tue Mar 9 22:01:59 2021 +0500
+
+    added BirthdayCalendar class
+
+[33mcommit 34bd0c7bf482da9f70d5c8a78acaa626e01c75f8[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Tue Mar 9 20:26:59 2021 +0500
+
+    added MaskingInformationReqExp class
+
+[33mcommit e12eea3f9ccfc1f6f1a53093b7bf6bce1a96fa6d[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Tue Mar 9 20:09:00 2021 +0500
+
+    added PhoneCleaner class
+
+[33mcommit 09b7e94f7ee0f4b81bae2fd53ae2db5244b29b9a[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Mon Mar 8 01:11:39 2021 +0500
+
+    added FullNameFormatterReqExp class
+
+[33mcommit 0008d5e1116d80dd9ca334e8ec50b29e3e09c3f4[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sun Mar 7 22:25:02 2021 +0500
+
+    modified SplitText, added regular expressions
+
+[33mcommit 97d285c3f13361e475159f5bf931fb7e4112050c[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Fri Mar 5 21:44:12 2021 +0500
+
+    added SplitText main class
+
+[33mcommit f4d8f8d3b26268c7c0b8412ff2c97640ee426e07[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Fri Mar 5 18:46:55 2021 +0500
+
+    added TotalEarningCalculatorReqExp class
+
+[33mcommit 09bff34c2a1c981e88612c3f570b965cfdeccf42[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Fri Mar 5 16:15:32 2021 +0500
+
+    modified FullNameFormatter class
+
+[33mcommit 2549286b061efaed2e07b97613ccaad38f848c84[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Fri Mar 5 14:15:46 2021 +0500
+
+    modified FullNameFormatter
+
+[33mcommit 2375b3ce4ff0f28dc4add81f52cafff770eab0c8[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Thu Mar 4 19:49:56 2021 +0500
+
+    modified FullNameFormatter
+
+[33mcommit ebd69639f7f02a9961a10212a67c6bf46a90182d[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Wed Mar 3 12:04:47 2021 +0500
+
+    modified Main class and Diamonds
+
+[33mcommit 22b17ce48654926892952b06f864010b5ae7df1a[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Tue Mar 2 21:19:30 2021 +0500
+
+    added Diamonds class
+
+[33mcommit 622701a841d013fd1d49edda7c9f41e4ade79d24[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Tue Mar 2 19:41:53 2021 +0500
+
+    added FullnameFormatter Main class beta-version
+
+[33mcommit d682d8832d3046baf0d6c7fa0a05ed20ece44f17[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sun Feb 28 22:17:38 2021 +0500
+
+    added Earnings class
+
+[33mcommit c19c9d35433712926dda632070dc2e205425a59c[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sun Feb 28 20:24:03 2021 +0500
+
+    added AlphabetCodes class
+
+[33mcommit 9f1827a6981c9bbc993361f152706b93501d16e4[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sat Feb 27 15:21:29 2021 +0500
+
+    modified GeometryCalculator
+
+[33mcommit 6954d2d8143c2acdd531bb96fd5858cea26a59e7[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sat Feb 27 14:47:46 2021 +0500
+
+    added pom.xml files
+
+[33mcommit 89e17428e414d4e55620bf5e8ba3c921a2416e86[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Fri Feb 26 21:10:50 2021 +0500
+
+    added GeometryCalculator class, tests passed succesfully
+
+[33mcommit de418c4d4e29f6a245d6103744bdb93c278eacf6[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Thu Feb 25 20:09:54 2021 +0500
+
+    added Trucks class
+
+[33mcommit ed06b6653c66f3fd96476053ec135aa70f82cf0a[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Thu Feb 25 20:08:27 2021 +0500
+
+    downloaded 4.3 homework, updating git repository
+
+[33mcommit 26828ecad364d565cb2c90ce630ebc99194976c5[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Thu Feb 25 16:40:27 2021 +0500
+
+    homework 4.1 with junk files, sorry
+
+[33mcommit f540b704418c85adef4c9ed42b777c240f1a2795[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Thu Feb 25 16:39:24 2021 +0500
+
+    gitignore
+
+[33mcommit 1eeb1517f76f8758c67380e2f54076dd4517f7aa[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Wed Feb 24 20:57:36 2021 +0500
+
+    fixed bug with float and double minimum value
+
+[33mcommit 820bd653293808467d59b737e73034cee5978611[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Tue Feb 23 21:18:06 2021 +0500
+
+    modified gitignore
+
+[33mcommit d9d7af8377773e3a88e1bf28e32c9c8b0cbe3b07[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Tue Feb 23 21:15:21 2021 +0500
+
+    modified gitignore
+
+[33mcommit 19a6de85cde46ffc013dfabd8856ed21edace187[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Tue Feb 23 17:42:07 2021 +0500
+
+    added Minmax file
+
+[33mcommit d05dd73ece02a556c06c47c795efa8ef9be10bcc[m[33m ([m[1;32mmastert[m[33m)[m
+Merge: c6b1998 1d399a5
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sat Jan 23 13:09:09 2021 +0500
+
+    homework 4.1 with a lot of junk
+
+[33mcommit c6b19983a12c2b024933a71dea3a2bb2de463621[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Fri Jan 22 14:19:54 2021 +0500
+
+    4.1 homework (with junk files)
+
+[33mcommit 225baf80d93c1ce65205e7c93c2466780f7e96b0[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Wed Jan 20 20:47:24 2021 +0500
+
+    added gitignore
+
+[33mcommit 1d399a556556f69506287135412cae59fe4ea417[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sun Jan 17 16:47:34 2021 +0500
+
+    commit with error
+
+[33mcommit c0220ad5ccbc041376a362a409c79cfc9ff76e97[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Wed Jan 6 17:59:49 2021 +0500
+
+    modified Cat
+
+[33mcommit deed1406f3e1537ac511356a1ff18d4fe47a8243[m
+Merge: 3522212 509af76
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sat Jan 2 21:23:09 2021 +0500
+
+    modified Loader and Cat
+
+[33mcommit 352221247273eb45365b47d7e28cdf533e054129[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sat Jan 2 21:20:42 2021 +0500
+
+    modified Loader and Cat
+
+[33mcommit f5a89bed2738ba653c81c291b4088726c0822d99[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sat Jan 2 21:16:27 2021 +0500
+
+    modified Cat and Loader
+
+[33mcommit 509af769169aaef1d9e08d07418e5c93e69bdab3[m
+Author: Skillbox <it@skillbox.ru>
+Date:   Sun Dec 27 15:23:37 2020 +0000
+
+    Add lesson
+
+[33mcommit a840168332e4b0b118b0597a5dcff6ccd4e98ee2[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sun Dec 27 18:36:06 2020 +0500
+
+    fixed Loader and Cat mistakes with already dead cats
+
+[33mcommit d52d4352295117f9f1c16f91bed607c4dfb2e104[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sat Dec 26 17:52:01 2020 +0500
+
+    fixed getKitten error, when a new kitten wasnt able to meow, eat etc.
+
+[33mcommit 47b2396786a84ab034d708bedcf2b5fabdcaa1b5[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Fri Dec 25 20:20:57 2020 +0500
+
+    Airport folder created, Main modified
+
+[33mcommit 7d0cab3202c0daba48f0a7731bcd7572ab52cfa3[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Fri Dec 25 19:41:59 2020 +0500
+
+    Loader and Cat updated and fixed
+
+[33mcommit 27b0b1ceea7e7502eac16bbe921691162d7ea68f[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sat Dec 19 21:18:13 2020 +0500
+
+    modified Car with getters and setters, modified Cat with colour setters and getters
+
+[33mcommit 18bec98b5a42a081b8863cb31939b3f2ff5ee865[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sat Dec 19 20:51:09 2020 +0500
+
+    modified Loader, created getKitten and modified Cat constructor
+
+[33mcommit 04dabcf1dbc09acd66e3f4abd99ca66b40c7453c[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sun Dec 13 23:26:32 2020 +0500
+
+    fixed Cat, Loader
+
+[33mcommit e7c61b8286a6f7930a6cc60bb8b423598b953075[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sat Dec 12 20:40:34 2020 +0500
+
+    added CatCount, Colours enum, DeadMeow DeadFeed
+
+[33mcommit fc749b0443d87f86fbf7af91bab70a45becd0661[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Sat Dec 12 01:10:51 2020 +0500
+
+    DeadMeow class added
+
+[33mcommit 0d20f9bc273a734ca0f65cd838f9fcd5bf19bb36[m
+Author: Daniil Zhvakin <da.zhvakin@gmail.com>
+Date:   Fri Dec 11 18:35:42 2020 +0500
+
+    added gitignore
+
+[33mcommit f7c5cc4b33dd5f567e7fcb559b12f9b6df363e50[m
+Author: Skillbox <it@skillbox.ru>
+Date:   Fri Apr 17 14:04:13 2020 +0000
+
+    Add lesson
+
+[33mcommit 1542a8ec25982ccc9c82f002b10873f089d4f2a2[m
+Author: Skillbox <it@skillbox.ru>
+Date:   Thu Apr 16 08:40:29 2020 +0000
+
+    Add .gitignore
