@@ -28,7 +28,7 @@ public class HTMLParser {
         for (Line line : metroLines) {
             System.out.println(line.getLineName() + " (" + line.getLineNumber() + ")");
             for (Station station : line.getStationList()) {
-                System.out.println("\t" + station.getStationName());
+                System.out.println("\t" + station.getName());
             }
         }
     }
