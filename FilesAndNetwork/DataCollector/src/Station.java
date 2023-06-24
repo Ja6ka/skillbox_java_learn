@@ -12,6 +12,7 @@ public class Station {
 
     private String name;
     private String date;
+    private String depth;
     private Line line;
 
     public Station(String name, Line line) {
@@ -25,6 +26,10 @@ public class Station {
     }
 
     public Station() {
+    }
+
+    public Station(String name) {
+
     }
 
     public static List<Station> readJsonFile(String filePath) {
@@ -46,7 +51,19 @@ public class Station {
         return date;
     }
 
+    public String getDepth() {
+        return depth;
+    }
+
     public Line getLine() {
         return line;
+    }
+
+    public void setDate(String date) {
+        this.date=date;
+    }
+
+    public void setDepth(String depth) {
+        this.depth=depth;
     }
 }
