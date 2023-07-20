@@ -14,6 +14,7 @@ public class Station {
     private String date;
     private String depth;
     private Line line;
+    private static List<Station> allStations = new ArrayList<>();
 
     public Station(String name, Line line) {
         this.name = name;
@@ -30,6 +31,16 @@ public class Station {
 
     public Station(String name) {
 
+    }
+
+    public static void addNewStations(List<Station> stations) {
+        allStations.addAll(stations);
+    }
+
+    public static void printStations () {
+        for (Station station : allStations) {
+            System.out.println(station.toString());
+        }
     }
 
     public static List<Station> readJsonFile(String filePath) {
@@ -65,5 +76,24 @@ public class Station {
 
     public void setDepth(String depth) {
         this.depth=depth;
+    }
+
+    public void setName(String name) {
+        this.name=name;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder stationString = new StringBuilder(name + "\n" + "\t");
+        if (date!=null) {
+            stationString.append("Дата открытия: ").append(date).append("\n").append("\t");
+        }
+        if (depth!=null) {
+            stationString.append("Глубина: ").append(depth).append("\n").append("\t");
+        }
+        if (line!=null) {
+            stationString.append("Линия: ").append(line).append("\n");
+        }
+        return stationString.toString();
     }
 }

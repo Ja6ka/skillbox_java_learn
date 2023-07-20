@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
@@ -20,13 +21,11 @@ public class Main {
 //        }
 
         String csvFilePath = "C:\\java_basics\\FilesAndNetwork\\DataCollector\\lib\\data\\data\\4\\6\\dates-1.csv";
-        List<Station> stationsCsv = CSVParser.readCsvFile(csvFilePath);
+        Station.addNewStations(CSVParser.readCsvFile(csvFilePath));
+        List<Station> testList = new ArrayList<>();
+        testList.add(new Station("Бибирево", "31.12.1992"));
+        Station.addNewStations(testList);
+        Station.printStations();
 
-        for (Station station : stationsCsv) {
-            System.out.println("Название станции: " + station.getName());
-            System.out.println("Дата открытия: " + station.getDate());
-            System.out.println("Глубина: " + station.getDepth());
-            System.out.println();
-        }
     }
 }
