@@ -87,6 +87,7 @@ public class CSVParser {
                     stationMap.put(stationName, station);
                 }
                 station.setDepth(depth);
+                station.setName(stationName);
             }
         } catch (IOException | CsvValidationException e) {
             e.printStackTrace();

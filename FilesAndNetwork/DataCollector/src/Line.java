@@ -4,7 +4,7 @@ import java.util.List;
 public class Line {
 
     private static Integer count = 0;
-    private String lineName;
+    private final String lineName;
     private String lineNumber;
     private List<Station> stationList;
 
@@ -15,7 +15,8 @@ public class Line {
         count++;
     }
 
-    public Line() {
+    public Line(String lineName) {
+        this.lineName = lineName;
     }
 
     public String getLineName() {

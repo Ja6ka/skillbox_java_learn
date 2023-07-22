@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 
 public class HTMLParser {
-    public static void parseAndPrintLinesAndStations(String htmlFilePath) throws IOException {
+    public static void parseLinesAndStations(String htmlFilePath) throws IOException {
         Document doc = Jsoup.connect(htmlFilePath).get();
         Elements lines = doc.select("div[data-line]");
         ArrayList<Line> metroLines = new ArrayList<>();
@@ -23,13 +23,6 @@ public class HTMLParser {
                 metroLine.addStation(metroStation);
             }
             metroLines.add(metroLine);
-        }
-
-        for (Line line : metroLines) {
-            System.out.println(line.getLineName() + " (" + line.getLineNumber() + ")");
-            for (Station station : line.getStationList()) {
-                System.out.println("\t" + station.getName());
-            }
         }
     }
 }

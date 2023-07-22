@@ -5,8 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Station {
 
@@ -14,7 +13,7 @@ public class Station {
     private String date;
     private String depth;
     private Line line;
-    private static List<Station> allStations = new ArrayList<>();
+    private static final Map<String, Station> allStations = new TreeMap<>();
 
     public Station(String name, Line line) {
         this.name = name;
@@ -34,19 +33,32 @@ public class Station {
     }
 
     public static void addNewStations(List<Station> stations) {
-        allStations.addAll(stations);
+        for (Station station : stations) {
+            String name = station.getName();
+            String date = station.getDate();
+            String depth = station.getDepth();
+
+            allStations.putIfAbsent(name, station);
+            if (depth != null && allStations.containsKey(name)) {
+                allStations.get(name).setDepth(depth);
+            }
+            if (date != null && allStations.containsKey(name)) {
+                allStations.get(name).setDate(date);
+            }
+        }
     }
 
-    public static void printStations () {
-        for (Station station : allStations) {
+    public static void printStations() {
+        for (Station station : allStations.values()) {
             System.out.println(station.toString());
         }
     }
 
     public static List<Station> readJsonFile(String filePath) {
-        try (FileReader reader = new FileReader(filePath,  StandardCharsets.UTF_8)) {
+        try (FileReader reader = new FileReader(filePath, StandardCharsets.UTF_8)) {
             Gson gson = new Gson();
-            Type listType = new TypeToken<ArrayList<Station>>() {}.getType();
+            Type listType = new TypeToken<ArrayList<Station>>() {
+            }.getType();
             return gson.fromJson(reader, listType);
         } catch (IOException e) {
             e.printStackTrace();
@@ -71,27 +83,27 @@ public class Station {
     }
 
     public void setDate(String date) {
-        this.date=date;
+        this.date = date;
     }
 
     public void setDepth(String depth) {
-        this.depth=depth;
+        this.depth = depth;
     }
 
     public void setName(String name) {
-        this.name=name;
+        this.name = name;
     }
 
     @Override
     public String toString() {
         StringBuilder stationString = new StringBuilder(name + "\n" + "\t");
-        if (date!=null) {
+        if (date != null) {
             stationString.append("Дата открытия: ").append(date).append("\n").append("\t");
         }
-        if (depth!=null) {
+        if (depth != null) {
             stationString.append("Глубина: ").append(depth).append("\n").append("\t");
         }
-        if (line!=null) {
+        if (line != null) {
             stationString.append("Линия: ").append(line).append("\n");
         }
         return stationString.toString();
