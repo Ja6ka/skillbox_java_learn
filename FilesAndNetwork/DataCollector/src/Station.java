@@ -1,4 +1,5 @@
 import com.google.gson.Gson;
+import com.google.gson.annotations.SerializedName;
 import com.google.gson.reflect.TypeToken;
 
 import java.io.FileReader;
@@ -9,8 +10,10 @@ import java.util.*;
 
 public class Station {
 
+    @SerializedName(value = "station_name", alternate = {"name"})
     private String name;
     private String date;
+    @SerializedName(value = "depth_meters", alternate = {"depth"})
     private String depth;
     private Line line;
     private static final Map<String, Station> allStations = new TreeMap<>();
@@ -18,14 +21,6 @@ public class Station {
     public Station(String name, Line line) {
         this.name = name;
         this.line = line;
-    }
-
-    public Station(String name, String date) {
-        this.name = name;
-        this.date = date;
-    }
-
-    public Station() {
     }
 
     public Station(String name) {
@@ -54,17 +49,6 @@ public class Station {
         }
     }
 
-    public static List<Station> readJsonFile(String filePath) {
-        try (FileReader reader = new FileReader(filePath, StandardCharsets.UTF_8)) {
-            Gson gson = new Gson();
-            Type listType = new TypeToken<ArrayList<Station>>() {
-            }.getType();
-            return gson.fromJson(reader, listType);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
 
     public String getName() {
         return name;

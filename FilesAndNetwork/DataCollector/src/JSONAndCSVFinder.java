@@ -7,6 +7,7 @@ public class JSONAndCSVFinder {
         File folder = new File(folderPath);
         ArrayList<String> jsonFiles = new ArrayList<>();
         ArrayList<String> csvFiles = new ArrayList<>();
+        ArrayList<String> allFiles = new ArrayList<>();
         if (folder.exists() && folder.isDirectory()) {
 
             searchFilesRecursively(folder, jsonFiles, csvFiles);
@@ -23,7 +24,9 @@ public class JSONAndCSVFinder {
         } else {
             System.out.println("Папка не существует или указанный путь не является папкой.");
         }
-        return csvFiles;
+        allFiles.addAll(csvFiles);
+        allFiles.addAll(jsonFiles);
+        return allFiles;
     }
 
     public static void searchFilesRecursively(File folder, ArrayList<String> jsonFiles, ArrayList<String> csvFiles) {

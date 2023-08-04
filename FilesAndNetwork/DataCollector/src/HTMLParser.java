@@ -5,24 +5,30 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class HTMLParser {
-    public static void parseLinesAndStations(String htmlFilePath) throws IOException {
-        Document doc = Jsoup.connect(htmlFilePath).get();
-        Elements lines = doc.select("div[data-line]");
-        ArrayList<Line> metroLines = new ArrayList<>();
+    public static void main(String[] args) {
+        try {
+            String url = "https://skillbox-java.github.io";
+            Document doc = Jsoup.connect(url).get();
 
-        for (Element line : lines) {
-            String lineNumber = line.attr("data-line");
-            String lineName = line.select("h2").text();
-            Line metroLine = new Line(lineName, lineNumber);
-            Elements stations = line.select("span.name");
-            for (Element station : stations) {
-                Station metroStation = new Station(station.text(), metroLine);
-                metroLine.addStation(metroStation);
+            Elements lines = doc.select("div[data-line]");
+
+            for (Element line : lines) {
+                String lineNumber = line.attr("data-line");
+                String lineName = line.select("h2").text();
+                System.out.println("Линия: " + lineName + " (" + lineNumber + ")");
+
+                Elements stations = line.select("span.name");
+                for (Element station : stations) {
+                    String stationName = station.text();
+                    System.out.println("\tСтанция: " + stationName);
+                }
             }
-            metroLines.add(metroLine);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }

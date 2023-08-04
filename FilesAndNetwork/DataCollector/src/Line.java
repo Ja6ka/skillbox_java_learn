@@ -35,6 +35,13 @@ public class Line {
         stationList.add(station);
     }
 
+    @Override
+    public String toString() {
+        return "Line{" +
+                "lineName='" + lineName + '\'' +
+                ", lineNumber='" + lineNumber + '\'';
+    }
+
     public static Integer getCount() {
         return count;
     }
