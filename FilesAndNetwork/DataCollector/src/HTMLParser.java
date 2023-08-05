@@ -18,7 +18,7 @@ public class HTMLParser {
 
             for (Element line : lines) {
                 String lineNumber = line.attr("data-line");
-                String lineName = line.select("h2").text();
+                String lineName = line.select("span.js-metro-line").text();
                 System.out.println("Линия: " + lineName + " (" + lineNumber + ")");
 
                 Elements stations = line.select("span.name");
