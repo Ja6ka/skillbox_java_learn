@@ -16,23 +16,27 @@ public class HtmlParserAndFinder {
             int lineSelector = 0;
 
             for (Element line : lines) {
-                List<String> stationsList = new ArrayList<>();
+                List<String> stationsListForMap = new ArrayList<>();
+                List<Station> stationsList = new ArrayList<>();
                 String lineNumber = line.attr("data-line");
                 String lineName = lineNames.get(lineSelector).select("span.js-metro-line").text();
-                System.out.println("Линия: " + lineName + " (" + lineNumber + ")");
-
+                //System.out.println("Линия: " + lineName + " (" + lineNumber + ")");
+                Line tempLine = new Line(lineName, lineNumber);
                 Elements stations = line.select("p.single-station");
                 for (Element station : stations) {
                     String connection = station.select("span.t-icon-metroln").attr("title");
                     String stationName = station.select("span.name").text();
-                    stationsList.add(stationName);
-                    System.out.println("\tСтанция: " + stationName);
+                    stationsListForMap.add(stationName);
+                    stationsList.add(new Station(stationName, tempLine, connection.length() > 1));
+                    //System.out.println("\tСтанция: " + stationName);
                     if (connection.length() > 1) {
-                        System.out.println("\t\t" + connection);
+                        //System.out.println("\t\t" + connection);
                     }
                 }
                 lineSelector++;
-                stationsByLines.put(lineName + " " + lineNumber, stationsList);
+                stationsByLines.put(lineName + " " + lineNumber, stationsListForMap);
+                Station.addNewStations(stationsList);
+                System.out.println("--------------------------------------------------------" + stationsList);
             }
         } catch (Exception e) {
             e.printStackTrace();

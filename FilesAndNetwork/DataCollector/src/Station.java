@@ -1,11 +1,6 @@
-import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.reflect.TypeToken;
-
-import java.io.FileReader;
-import java.io.IOException;
-import java.lang.reflect.Type;
-import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 public class Station {
@@ -16,11 +11,13 @@ public class Station {
     @SerializedName(value = "depth_meters", alternate = {"depth"})
     private String depth;
     private Line line;
-    private static final Map<String, Station> allStations = new TreeMap<>();
+    public boolean hasConnection;
+    public static final Map<String, Station> allStations = new TreeMap<>();
 
-    public Station(String name, Line line) {
+    public Station(String name, Line line, boolean hasConnection) {
         this.name = name;
         this.line = line;
+        this.hasConnection = hasConnection;
     }
 
     public Station(String name) {
@@ -29,9 +26,9 @@ public class Station {
 
     public static void addNewStations(List<Station> stations) {
         for (Station station : stations) {
-            String name = station.getName();
-            String date = station.getDate();
-            String depth = station.getDepth();
+            String name = station.name;
+            String date = station.date;
+            String depth = station.depth;
 
             allStations.putIfAbsent(name, station);
             if (depth != null && allStations.containsKey(name)) {
@@ -40,6 +37,7 @@ public class Station {
             if (date != null && allStations.containsKey(name)) {
                 allStations.get(name).setDate(date);
             }
+                allStations.get(name).hasConnection = station.hasConnection;
         }
     }
 
@@ -78,6 +76,10 @@ public class Station {
         this.name = name;
     }
 
+    public boolean isHasConnection() {
+        return hasConnection;
+    }
+
     @Override
     public String toString() {
         StringBuilder stationString = new StringBuilder(name + "\n" + "\t");
@@ -88,8 +90,10 @@ public class Station {
             stationString.append("Глубина: ").append(depth).append("\n").append("\t");
         }
         if (line != null) {
-            stationString.append("Линия: ").append(line).append("\n");
+            stationString.append("Линия: ").append(line).append("\n").append("\t");
         }
+        stationString.append("Переход: ").append(hasConnection).append("\n");
         return stationString.toString();
     }
+
 }

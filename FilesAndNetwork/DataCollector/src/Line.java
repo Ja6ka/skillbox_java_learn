@@ -7,16 +7,22 @@ public class Line {
     private final String lineName;
     private String lineNumber;
     private List<Station> stationList;
+    public static List <Line> allLines = new ArrayList<>();
 
     public Line(String lineName, String lineNumber) {
         this.lineName = lineName;
         this.lineNumber = lineNumber;
-        stationList = new ArrayList<>();
+        stationList = new ArrayList<>();;
         count++;
     }
 
     public Line(String lineName) {
         this.lineName = lineName;
+    }
+
+    @Override
+    public String toString() {
+        return lineName;
     }
 
     public String getLineName() {
@@ -33,13 +39,6 @@ public class Line {
 
     public void addStation(Station station) {
         stationList.add(station);
-    }
-
-    @Override
-    public String toString() {
-        return "Line{" +
-                "lineName='" + lineName + '\'' +
-                ", lineNumber='" + lineNumber + '\'';
     }
 
     public static Integer getCount() {
