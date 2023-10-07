@@ -1,51 +1,53 @@
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
+    private static final int CORES_COUNT = 12;
 
     public static void main(String[] args) {
-        String srcFolder = "/users/sortedmap/Desktop/src";
-        String dstFolder = "/users/sortedmap/Desktop/dst";
+        String srcFolder = "C:\\java_basics\\Multithreading\\ImageResizer\\lib\\srcPicLib";
+        String dstFolder = "C:\\java_basics\\Multithreading\\ImageResizer\\lib\\dstPicLib";
 
         File srcDir = new File(srcFolder);
 
         long start = System.currentTimeMillis();
 
         File[] files = srcDir.listFiles();
-
-        try {
-            for (File file : files) {
-                BufferedImage image = ImageIO.read(file);
-                if (image == null) {
-                    continue;
-                }
-
-                int newWidth = 300;
-                int newHeight = (int) Math.round(
-                    image.getHeight() / (image.getWidth() / (double) newWidth)
-                );
-                BufferedImage newImage = new BufferedImage(
-                    newWidth, newHeight, BufferedImage.TYPE_INT_RGB
-                );
-
-                int widthStep = image.getWidth() / newWidth;
-                int heightStep = image.getHeight() / newHeight;
-
-                for (int x = 0; x < newWidth; x++) {
-                    for (int y = 0; y < newHeight; y++) {
-                        int rgb = image.getRGB(x * widthStep, y * heightStep);
-                        newImage.setRGB(x, y, rgb);
-                    }
-                }
-
-                File newFile = new File(dstFolder + "/" + file.getName());
-                ImageIO.write(newImage, "jpg", newFile);
+        List<File[]> filesByCores = new ArrayList<>()
+        {{
+            for (int i = 0; i < CORES_COUNT; i++)
+            {
+                add(new File[Math.round(files.length / CORES_COUNT) + 1]);
             }
-        } catch (Exception ex) {
-            ex.printStackTrace();
+        }};
+
+        int currentElementIndex = 0;
+        int currentArrayIndex = 0;
+
+        assert files != null;
+        for (File file : files)
+        {
+            if (currentArrayIndex == filesByCores.size())
+            {
+                currentArrayIndex = 0;
+                currentElementIndex++;
+            }
+            filesByCores.get(currentArrayIndex)[currentElementIndex] = file;
+            currentArrayIndex++;
         }
 
-        System.out.println("Duration: " + (System.currentTimeMillis() - start));
+        filesByCores.forEach(arr ->
+        {
+            ImageResizer resizer = new ImageResizer(arr, dstFolder);
+            Thread thread = new Thread(resizer);
+            thread.start();
+            try {
+                thread.join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        });
+
     }
 }
