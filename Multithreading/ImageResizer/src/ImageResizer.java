@@ -8,7 +8,7 @@ public class ImageResizer implements Runnable {
     private File[] files;
     private String dstFolder;
 
-    public ImageResizer(File[] files,String dstFolder) {
+    public ImageResizer(File[] files, String dstFolder) {
         this.files = files;
         this.dstFolder = dstFolder;
     }
@@ -34,7 +34,7 @@ public class ImageResizer implements Runnable {
                 BufferedImage newImage = Scalr.resize(image, newWidth, newHeight);
 
                 File newFile = new File(dstFolder + "/" + file.getName());
-                    ImageIO.write(newImage, "jpg", newFile);
+                ImageIO.write(newImage, "jpg", newFile);
             }
         } catch (Exception ex) {
             ex.printStackTrace();

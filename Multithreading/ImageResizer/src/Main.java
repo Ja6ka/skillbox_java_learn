@@ -14,10 +14,8 @@ public class Main {
         long start = System.currentTimeMillis();
 
         File[] files = srcDir.listFiles();
-        List<File[]> filesByCores = new ArrayList<>()
-        {{
-            for (int i = 0; i < CORES_COUNT; i++)
-            {
+        List<File[]> filesByCores = new ArrayList<>() {{
+            for (int i = 0; i < CORES_COUNT; i++) {
                 add(new File[Math.round(files.length / CORES_COUNT) + 1]);
             }
         }};
@@ -26,10 +24,8 @@ public class Main {
         int currentArrayIndex = 0;
 
         assert files != null;
-        for (File file : files)
-        {
-            if (currentArrayIndex == filesByCores.size())
-            {
+        for (File file : files) {
+            if (currentArrayIndex == filesByCores.size()) {
                 currentArrayIndex = 0;
                 currentElementIndex++;
             }
@@ -42,12 +38,6 @@ public class Main {
             ImageResizer resizer = new ImageResizer(arr, dstFolder);
             Thread thread = new Thread(resizer);
             thread.start();
-            try {
-                thread.join();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
         });
-
     }
 }
