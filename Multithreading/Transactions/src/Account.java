@@ -1,6 +1,6 @@
 public class Account {
 
-    private long money;
+    private volatile long money;
     private String accNumber;
     private volatile boolean isBlocked = false;
 

@@ -3,7 +3,7 @@ import java.util.Random;
 
 public class Bank {
 
-    private Map<String, Account> accounts;
+    private final Map<String, Account> accounts;
     private final Random random = new Random();
 
     public Bank(Map<String, Account> accounts) {
@@ -16,22 +16,24 @@ public class Bank {
         return random.nextBoolean();
     }
 
-    /**
-     * TODO: реализовать метод. Метод переводит деньги между счетами. Если сумма транзакции > 50000,
-     * то после совершения транзакции, она отправляется на проверку Службе Безопасности – вызывается
-     * метод isFraud. Если возвращается true, то делается блокировка счетов (как – на ваше
-     * усмотрение)
-     */
     public void transfer(String senderNum, String receiverNum, long amount) throws InterruptedException {
+        String confirmation = "";
         if (amount > 50000 & isFraud()) {
             blockAccount(senderNum);
             blockAccount(receiverNum);
         } else for (Account account : accounts.values()) {
-            if (account.getAccNumber().equals(senderNum)) {
-                account.setMoney(account.getMoney() - amount);
+            if (account.getAccNumber().equals(senderNum) && account.getMoney() >= amount && !account.isBlocked()) {
+                synchronized (account) {
+                    account.setMoney(account.getMoney() - amount);
+                    confirmation = receiverNum;
+                    System.out.println("Transferred " + amount + " to #" + receiverNum + ", current balance: " + account.getMoney());
+                }
             }
-            if (account.getAccNumber().equals(receiverNum)) {
-                account.setMoney(account.getMoney() + amount);
+            if (account.getAccNumber().equals(receiverNum) && confirmation.equals(receiverNum)) {
+                synchronized (account) {
+                    account.setMoney(account.getMoney() + amount);
+                    System.out.println("Received " + amount + " from #" + senderNum + ", current balance: " + account.getMoney());
+                }
             }
         }
     }
@@ -58,6 +60,8 @@ public class Bank {
         for (Account account : accounts.values()) {
             if (account.getAccNumber().equals(accountNum)) {
                 account.setBlocked();
+                System.out.println("Account #" + account.getAccNumber() + " is temporarily unavailable" +
+                        " due to fraudulent activity");
             }
         }
     }
