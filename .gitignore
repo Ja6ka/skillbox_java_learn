@@ -5,7 +5,8 @@
 ### Java ###
 # Compiled class file
 *.class
-
+*.xml
+*.iml
 04_NumbersStringsAndDates/homework_4.5/FullNameFormatterRegExp/.gitignore
 04_NumbersStringsAndDates/homework_4.5/FullNameFormatterRegExp/FullNameFormatterRegExp.iml
 04_NumbersStringsAndDates/homework_4.5/FullNameFormatterRegExp/checkstyle.xml
