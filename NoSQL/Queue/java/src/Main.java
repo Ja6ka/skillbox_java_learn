@@ -17,15 +17,15 @@ public class Main {
 
         while (true) {
             currentUserID = Integer.parseInt(jedis.rpop(KEY));
-            System.out.println("Показываем пользователя - " + currentUserID);
+            System.out.println("РџРѕРєР°Р·С‹РІР°РµРј РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ - " + currentUserID);
             jedis.lpush(KEY, String.valueOf(currentUserID));
             counter++;
 
             if (counter == 10) {
                 paidUserID = random.nextInt(1, 20);
                 jedis.rpush(KEY, String.valueOf(paidUserID));
-                System.out.println("Пользователь " + paidUserID + " оплатил");
-                System.out.println("Показываем пользователя - " + paidUserID);
+                System.out.println("РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ " + paidUserID + " РѕРїР»Р°С‚РёР»");
+                System.out.println("РџРѕРєР°Р·С‹РІР°РµРј РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ - " + paidUserID);
                 jedis.rpop(KEY);
                 counter = 0;
             }
